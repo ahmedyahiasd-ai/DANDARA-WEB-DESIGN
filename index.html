@@ -18,7 +18,6 @@
   <meta property="og:url" content="https://dandara-web-design.vercel.app/" />
   <meta property="og:title" content="Dandara Web Design | Modern Websites" />
   <meta property="og:description" content="I design and build clean, fast and responsive websites for businesses and individuals." />
-  <!-- تم التحديث بملف PNG الجديد للمعاينة -->
   <meta property="og:image" content="https://dandara-web-design.vercel.app/Project%201.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -551,7 +550,7 @@
     }
 
     /* =========================================
-       WORK / PORTFOLIO
+       WORK / PORTFOLIO (CSS MOCKUPS)
     ========================================= */
 
     .portfolio-grid {
@@ -567,6 +566,10 @@
       border-radius: 25px;
       border: 1px solid var(--border);
       background: #0d1714;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 30px;
     }
 
     .project-large {
@@ -578,45 +581,146 @@
       inset: 0;
       background:
         radial-gradient(
-          circle at 70% 30%,
-          rgba(126,217,87,.24),
-          transparent 25%
+          circle at 80% 20%,
+          rgba(126,217,87,.18),
+          transparent 40%
         ),
         linear-gradient(
           145deg,
           #123f30,
-          #07100d 75%
+          #07100d 80%
         );
       transition: transform .6s ease;
+      z-index: 0;
     }
 
-    .project-img {
-      position: absolute;
-      inset: 0;
+    .project:hover .project-bg {
+      transform: scale(1.03);
+    }
+
+    /* CSS Wireframe Mockup Canvas */
+    .mockup-canvas {
+      position: relative;
+      z-index: 1;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.75;
-      transition: transform .6s ease, opacity .6s ease;
+      height: 220px;
+      background: rgba(10, 20, 16, 0.7);
+      border: 1px solid rgba(126, 217, 87, 0.2);
+      border-radius: 16px;
+      padding: 16px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      transition: transform 0.4s ease;
+      overflow: hidden;
     }
 
-    .project:hover .project-img {
-      transform: scale(1.05);
-      opacity: 0.95;
+    .project-large .mockup-canvas {
+      height: 300px;
+    }
+
+    .project:hover .mockup-canvas {
+      transform: translateY(-5px);
+      border-color: rgba(126, 217, 87, 0.4);
+    }
+
+    /* Mockup Header Bar */
+    .mock-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .mock-dots {
+      display: flex;
+      gap: 5px;
+    }
+
+    .mock-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(126, 217, 87, 0.3);
+    }
+
+    .mock-nav-lines {
+      display: flex;
+      gap: 10px;
+    }
+
+    .mock-line {
+      height: 4px;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.15);
+    }
+
+    /* Mockup Wireframe Variants */
+    .mock-hero-layout {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .mock-title {
+      height: 14px;
+      width: 60%;
+      background: var(--green-light);
+      border-radius: 4px;
+      opacity: 0.9;
+    }
+
+    .mock-sub {
+      height: 8px;
+      width: 85%;
+      background: rgba(255,255,255,0.2);
+      border-radius: 3px;
+    }
+
+    .mock-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .mock-card {
+      height: 65px;
+      background: rgba(126,217,87,0.06);
+      border: 1px solid rgba(126,217,87,0.15);
+      border-radius: 10px;
+    }
+
+    .mock-chart {
+      display: flex;
+      align-items: flex-end;
+      gap: 8px;
+      height: 80px;
+      margin-top: 15px;
+      padding: 8px;
+      background: rgba(255,255,255,0.02);
+      border-radius: 10px;
+    }
+
+    .mock-bar-item {
+      flex: 1;
+      background: linear-gradient(0deg, var(--green), var(--green-light));
+      border-radius: 4px;
     }
 
     .project-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(7,16,13,0.1) 0%, rgba(7,16,13,0.85) 100%);
+      background: linear-gradient(180deg, rgba(7,16,13,0) 40%, rgba(7,16,13,0.92) 100%);
       z-index: 1;
+      pointer-events: none;
     }
 
     .project-info {
-      position: absolute;
-      left: 28px;
-      bottom: 25px;
+      position: relative;
       z-index: 2;
+      margin-top: 20px;
     }
 
     .project-info span {
@@ -1282,7 +1386,7 @@
 
 
     <!-- =========================================
-         PORTFOLIO
+         PORTFOLIO (CSS DRAWN MOCKUPS)
     ========================================= -->
 
     <section id="work">
@@ -1310,11 +1414,36 @@
 
         <div class="portfolio-grid">
 
+          <!-- PROJECT 1: Modern Business Mockup -->
           <div class="project project-large reveal">
-
             <div class="project-bg"></div>
 
-            <img src="Project 1.png" alt="Modern Business" class="project-img" />
+            <div class="mockup-canvas">
+              <div class="mock-bar">
+                <div class="mock-dots">
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                </div>
+                <div class="mock-nav-lines">
+                  <div class="mock-line" style="width: 25px;"></div>
+                  <div class="mock-line" style="width: 35px;"></div>
+                  <div class="mock-line" style="width: 20px;"></div>
+                </div>
+              </div>
+
+              <div class="mock-hero-layout">
+                <div class="mock-title"></div>
+                <div class="mock-sub"></div>
+                <div class="mock-sub" style="width: 50%;"></div>
+                
+                <div class="mock-cards-grid">
+                  <div class="mock-card"></div>
+                  <div class="mock-card"></div>
+                  <div class="mock-card"></div>
+                </div>
+              </div>
+            </div>
 
             <div class="project-overlay"></div>
 
@@ -1322,15 +1451,33 @@
               <span>Web Design</span>
               <h3>Modern Business</h3>
             </div>
-
           </div>
 
-
+          <!-- PROJECT 2: Digital Platform Dashboard Mockup -->
           <div class="project reveal">
-
             <div class="project-bg"></div>
 
-            <img src="Project 1.png" alt="Digital Platform" class="project-img" />
+            <div class="mockup-canvas">
+              <div class="mock-bar">
+                <div class="mock-dots">
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                </div>
+                <div class="mock-line" style="width: 45px;"></div>
+              </div>
+
+              <div class="mock-hero-layout">
+                <div class="mock-title" style="width: 40%; background: var(--green-bright);"></div>
+                <div class="mock-chart">
+                  <div class="mock-bar-item" style="height: 35%;"></div>
+                  <div class="mock-bar-item" style="height: 65%;"></div>
+                  <div class="mock-bar-item" style="height: 45%;"></div>
+                  <div class="mock-bar-item" style="height: 85%;"></div>
+                  <div class="mock-bar-item" style="height: 60%;"></div>
+                  <div class="mock-bar-item" style="height: 100%;"></div>
+                </div>
+              </div>
+            </div>
 
             <div class="project-overlay"></div>
 
@@ -1338,15 +1485,28 @@
               <span>UI / UX</span>
               <h3>Digital Platform</h3>
             </div>
-
           </div>
 
-
+          <!-- PROJECT 3: Creative Studio Grid Mockup -->
           <div class="project reveal">
-
             <div class="project-bg"></div>
 
-            <img src="Project 1.png" alt="Creative Studio" class="project-img" />
+            <div class="mockup-canvas">
+              <div class="mock-bar">
+                <div class="mock-dots">
+                  <div class="mock-dot"></div>
+                </div>
+                <div class="mock-line" style="width: 30px;"></div>
+              </div>
+
+              <div class="mock-hero-layout">
+                <div class="mock-title" style="width: 55%;"></div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 5px;">
+                  <div class="mock-card" style="height: 75px; background: rgba(82, 232, 120, 0.12);"></div>
+                  <div class="mock-card" style="height: 75px; background: rgba(255, 255, 255, 0.05);"></div>
+                </div>
+              </div>
+            </div>
 
             <div class="project-overlay"></div>
 
@@ -1354,15 +1514,39 @@
               <span>Brand Identity</span>
               <h3>Creative Studio</h3>
             </div>
-
           </div>
 
-
+          <!-- PROJECT 4: Startup Landing Mockup -->
           <div class="project project-large reveal">
-
             <div class="project-bg"></div>
 
-            <img src="Project 1.png" alt="Startup Website" class="project-img" />
+            <div class="mockup-canvas">
+              <div class="mock-bar">
+                <div class="mock-dots">
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                  <div class="mock-dot"></div>
+                </div>
+                <div class="mock-line" style="width: 50px;"></div>
+              </div>
+
+              <div class="mock-hero-layout">
+                <div class="mock-title" style="width: 70%; height: 18px;"></div>
+                <div class="mock-sub" style="width: 90%;"></div>
+                <div class="mock-sub" style="width: 65%;"></div>
+                
+                <div style="display: flex; gap: 10px; margin-top: 15px;">
+                  <div style="width: 80px; height: 22px; background: var(--green-light); border-radius: 20px;"></div>
+                  <div style="width: 70px; height: 22px; border: 1px solid rgba(255,255,255,0.2); border-radius: 20px;"></div>
+                </div>
+
+                <div class="mock-cards-grid" style="margin-top: 20px;">
+                  <div class="mock-card" style="height: 50px;"></div>
+                  <div class="mock-card" style="height: 50px;"></div>
+                  <div class="mock-card" style="height: 50px;"></div>
+                </div>
+              </div>
+            </div>
 
             <div class="project-overlay"></div>
 
@@ -1370,7 +1554,6 @@
               <span>Development</span>
               <h3>Startup Website</h3>
             </div>
-
           </div>
 
         </div>
