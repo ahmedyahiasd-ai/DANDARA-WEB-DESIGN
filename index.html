@@ -23,7 +23,7 @@
     /* =========================================
        DANDARA WEB DESIGN
        BRAND COLORS
-    ======================================== */
+    ========================================= */
 
     :root {
       --green-dark: #0B3D2E;
@@ -152,25 +152,15 @@
     .logo {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       font-weight: 800;
     }
 
-    .logo-icon {
-      width: 43px;
-      height: 43px;
-      border-radius: 12px;
-      display: grid;
-      place-items: center;
-      background: linear-gradient(
-        135deg,
-        var(--green-light),
-        var(--green)
-      );
-      color: var(--black);
-      font-size: 17px;
-      font-weight: 800;
-      box-shadow: 0 8px 30px rgba(126, 217, 87, 0.18);
+    .logo-img {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+      border-radius: 8px;
     }
 
     .logo-text {
@@ -390,10 +380,12 @@
     }
 
     .mini-logo {
-      color: var(--green-light);
-      font-size: 11px;
-      font-weight: 800;
-      margin-bottom: 65px;
+      margin-bottom: 35px;
+    }
+
+    .mini-logo img {
+      height: 35px;
+      width: auto;
     }
 
     .browser-content h3 {
@@ -580,47 +572,26 @@
       transition: transform .6s ease;
     }
 
-    .project:hover .project-bg {
-      transform: scale(1.05);
-    }
-
-    .project-screen {
+    .project-img {
       position: absolute;
-      width: 70%;
-      height: 70%;
-      right: 8%;
-      top: 12%;
-      border: 1px solid rgba(126,217,87,.2);
-      border-radius: 15px;
-      background: #0c1713;
-      box-shadow: 0 30px 60px rgba(0,0,0,.4);
-      padding: 20px;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.7;
+      transition: transform .6s ease, opacity .6s ease;
     }
 
-    .project-screen::before {
-      content: "";
-      display: block;
-      width: 45%;
-      height: 8px;
-      border-radius: 10px;
-      background: var(--green-light);
-      margin-bottom: 20px;
-      opacity: .8;
+    .project:hover .project-img {
+      transform: scale(1.05);
+      opacity: 0.9;
     }
 
-    .project-screen::after {
-      content: "";
-      display: block;
-      width: 80%;
-      height: 100px;
-      margin-top: 30px;
-      border-radius: 10px;
-      background:
-        linear-gradient(
-          135deg,
-          rgba(126,217,87,.3),
-          rgba(30,143,82,.08)
-        );
+    .project-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(7,16,13,0.1) 0%, rgba(7,16,13,0.85) 100%);
+      z-index: 1;
     }
 
     .project-info {
@@ -706,6 +677,13 @@
       font-size: 90px;
       color: var(--green-light);
       font-weight: 800;
+    }
+
+    .about-symbol img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
     }
 
     .about-content p {
@@ -1063,8 +1041,7 @@
     <div class="container navbar">
 
       <a href="#home" class="logo">
-        <div class="logo-icon">&lt;/&gt;</div>
-
+        <img src="Project 1.jpg" alt="Dandara Web Design Logo" class="logo-img" />
         <div class="logo-text">
           <strong>dandara</strong>
           <span>web design</span>
@@ -1145,7 +1122,7 @@
             <div class="browser-content">
 
               <div class="mini-logo">
-                DANDARA / WEB DESIGN
+                <img src="Project 1.jpg" alt="Dandara Logo" />
               </div>
 
               <h3>
@@ -1319,7 +1296,9 @@
 
             <div class="project-bg"></div>
 
-            <div class="project-screen"></div>
+            <img src="Project 1.jpg" alt="Modern Business" class="project-img" />
+
+            <div class="project-overlay"></div>
 
             <div class="project-info">
               <span>Web Design</span>
@@ -1333,10 +1312,9 @@
 
             <div class="project-bg"></div>
 
-            <div
-              class="project-screen"
-              style="width:60%;height:65%;"
-            ></div>
+            <img src="Project 1.jpg" alt="Digital Platform" class="project-img" />
+
+            <div class="project-overlay"></div>
 
             <div class="project-info">
               <span>UI / UX</span>
@@ -1350,10 +1328,9 @@
 
             <div class="project-bg"></div>
 
-            <div
-              class="project-screen"
-              style="width:65%;height:68%;left:8%;right:auto;"
-            ></div>
+            <img src="Project 1.jpg" alt="Creative Studio" class="project-img" />
+
+            <div class="project-overlay"></div>
 
             <div class="project-info">
               <span>Brand Identity</span>
@@ -1367,10 +1344,9 @@
 
             <div class="project-bg"></div>
 
-            <div
-              class="project-screen"
-              style="width:68%;"
-            ></div>
+            <img src="Project 1.jpg" alt="Startup Website" class="project-img" />
+
+            <div class="project-overlay"></div>
 
             <div class="project-info">
               <span>Development</span>
@@ -1486,7 +1462,7 @@
       <div class="container about-grid">
 
         <div class="about-symbol reveal">
-          &lt;/&gt;
+          <img src="Project 1.jpg" alt="Dandara Symbol" />
         </div>
 
 
@@ -1867,15 +1843,6 @@ Project: ${project}
 
 Message:
 ${message}`;
-
-
-      /*
-        Replace this number with your
-        actual WhatsApp number.
-
-        Example:
-        249912345678
-      */
 
       const phoneNumber = "249912345678";
 
