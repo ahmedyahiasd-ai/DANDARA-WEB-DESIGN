@@ -11,6 +11,24 @@
     content="Dandara Web Design creates modern, responsive and high-performance websites for businesses and individuals."
   />
 
+  <!-- =========================================
+       OPEN GRAPH / SOCIAL MEDIA PREVIEW TAGS
+  ========================================= -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dandara-web-design.vercel.app/" />
+  <meta property="og:title" content="Dandara Web Design | Modern Websites" />
+  <meta property="og:description" content="I design and build clean, fast and responsive websites for businesses and individuals." />
+  <!-- رابط الصورة المباشر على Vercel لضمان ظهورها عند المشاركة -->
+  <meta property="og:image" content="https://dandara-web-design.vercel.app/Project%201.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dandara Web Design | Modern Websites" />
+  <meta name="twitter:description" content="I design and build clean, fast and responsive websites for businesses and individuals." />
+  <meta name="twitter:image" content="https://dandara-web-design.vercel.app/Project%201.jpg" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -34,6 +52,1840 @@
       --black: #07100D;
       --black-2: #0D1714;
 
+      --white: #F4F9F3;
+      --gray: #A9B8B1;
+      --border: rgba(126, 217, 87, 0.15);
+
+      --container: 1180px;
+      --radius: 22px;
+
+      --transition: 0.3s ease;
+    }
+
+    /* =========================================
+       RESET
+    ========================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Montserrat", sans-serif;
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button,
+    input,
+    textarea {
+      font-family: inherit;
+    }
+
+    .container {
+      width: min(92%, var(--container));
+      margin: auto;
+    }
+
+    /* =========================================
+       BACKGROUND EFFECT
+    ========================================= */
+
+    body::before {
+      content: "";
+      position: fixed;
+      width: 500px;
+      height: 500px;
+      top: -250px;
+      left: -250px;
+      background: var(--green);
+      opacity: 0.08;
+      filter: blur(100px);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      width: 500px;
+      height: 500px;
+      bottom: -300px;
+      right: -200px;
+      background: var(--green-light);
+      opacity: 0.06;
+      filter: blur(120px);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* =========================================
+       HEADER
+    ========================================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: var(--transition);
+    }
+
+    header.scrolled {
+      background: rgba(7, 16, 13, 0.88);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+      height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* LOGO */
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+    }
+
+    .logo-img {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .logo-text strong {
+      font-size: 21px;
+      letter-spacing: -0.5px;
+    }
+
+    .logo-text span {
+      color: var(--green-light);
+      font-size: 9px;
+      letter-spacing: 4px;
+      margin-top: 5px;
+      font-weight: 600;
+    }
+
+    /* NAVIGATION */
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #c7d2cd;
+      font-size: 13px;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--green-light);
+    }
+
+    .nav-cta {
+      padding: 11px 19px;
+      border: 1px solid rgba(126, 217, 87, 0.4);
+      border-radius: 50px;
+      color: var(--green-light) !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--green-light);
+      color: var(--black) !important;
+    }
+
+    /* MOBILE MENU */
+
+    .menu-btn {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: transparent;
+      color: white;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    /* =========================================
+       HERO
+    ========================================= */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 130px 0 80px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .hero-content {
+      max-width: 650px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--green-light);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: var(--green-light);
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 6vw, 78px);
+      line-height: 0.98;
+      letter-spacing: -4px;
+      margin-bottom: 27px;
+    }
+
+    .hero h1 span {
+      color: var(--green-light);
+    }
+
+    .hero-description {
+      color: var(--gray);
+      max-width: 560px;
+      font-size: 16px;
+      margin-bottom: 35px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 15px 23px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--green-light);
+      color: var(--black);
+      box-shadow: 0 12px 35px rgba(126, 217, 87, 0.18);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 45px rgba(126, 217, 87, 0.28);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(244, 249, 243, 0.15);
+      color: var(--white);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--green-light);
+      color: var(--green-light);
+    }
+
+    /* HERO VISUAL */
+
+    .hero-visual {
+      position: relative;
+      height: 500px;
+    }
+
+    .browser {
+      position: absolute;
+      width: 100%;
+      max-width: 560px;
+      right: 0;
+      top: 30px;
+      background: #101b17;
+      border: 1px solid rgba(126, 217, 87, 0.16);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow:
+        0 40px 100px rgba(0, 0, 0, 0.5),
+        0 0 80px rgba(30, 143, 82, 0.1);
+      transform: perspective(1200px) rotateY(-5deg) rotateX(2deg);
+    }
+
+    .browser-bar {
+      height: 42px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0 15px;
+      background: #0c1512;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .browser-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #35443e;
+    }
+
+    .browser-content {
+      padding: 45px 38px 55px;
+      background:
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(126,217,87,.12),
+          transparent 30%
+        ),
+        linear-gradient(145deg, #09271e, #07100d);
+    }
+
+    .mini-logo {
+      margin-bottom: 35px;
+    }
+
+    .mini-logo img {
+      height: 35px;
+      width: auto;
+    }
+
+    .browser-content h3 {
+      font-size: 34px;
+      line-height: 1.05;
+      max-width: 380px;
+      margin-bottom: 18px;
+    }
+
+    .browser-content h3 span {
+      color: var(--green-light);
+    }
+
+    .browser-content p {
+      color: #8ea199;
+      font-size: 11px;
+      max-width: 340px;
+      margin-bottom: 25px;
+    }
+
+    .fake-button {
+      display: inline-block;
+      padding: 10px 17px;
+      background: var(--green-light);
+      color: #07100d;
+      border-radius: 30px;
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+    .floating-card {
+      position: absolute;
+      bottom: 10px;
+      left: -20px;
+      width: 190px;
+      padding: 20px;
+      border-radius: 18px;
+      background: rgba(13, 23, 20, 0.9);
+      border: 1px solid rgba(126,217,87,.16);
+      backdrop-filter: blur(15px);
+      box-shadow: 0 25px 50px rgba(0,0,0,.4);
+    }
+
+    .floating-card .number {
+      color: var(--green-light);
+      font-size: 30px;
+      font-weight: 800;
+    }
+
+    .floating-card p {
+      color: var(--gray);
+      font-size: 10px;
+      margin-top: 3px;
+    }
+
+    /* =========================================
+       SECTION
+    ========================================= */
+
+    section {
+      padding: 110px 0;
+    }
+
+    .section-heading {
+      max-width: 650px;
+      margin-bottom: 55px;
+    }
+
+    .section-heading.center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(32px, 4vw, 52px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 17px;
+    }
+
+    .section-heading h2 span {
+      color: var(--green-light);
+    }
+
+    .section-heading p {
+      color: var(--gray);
+      font-size: 14px;
+    }
+
+    /* =========================================
+       SERVICES
+    ========================================= */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      padding: 30px 25px;
+      background: linear-gradient(
+        145deg,
+        rgba(30,143,82,.10),
+        rgba(255,255,255,.015)
+      );
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: var(--transition);
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(126,217,87,.4);
+      background: linear-gradient(
+        145deg,
+        rgba(30,143,82,.16),
+        rgba(255,255,255,.025)
+      );
+    }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      margin-bottom: 25px;
+      background: rgba(126,217,87,.08);
+      border: 1px solid rgba(126,217,87,.15);
+      color: var(--green-light);
+      font-size: 21px;
+    }
+
+    .service-card h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: var(--gray);
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    /* =========================================
+       WORK / PORTFOLIO
+    ========================================= */
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .project {
+      position: relative;
+      overflow: hidden;
+      min-height: 360px;
+      border-radius: 25px;
+      border: 1px solid var(--border);
+      background: #0d1714;
+    }
+
+    .project-large {
+      min-height: 480px;
+    }
+
+    .project-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(
+          circle at 70% 30%,
+          rgba(126,217,87,.24),
+          transparent 25%
+        ),
+        linear-gradient(
+          145deg,
+          #123f30,
+          #07100d 75%
+        );
+      transition: transform .6s ease;
+    }
+
+    .project-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.7;
+      transition: transform .6s ease, opacity .6s ease;
+    }
+
+    .project:hover .project-img {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+
+    .project-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(7,16,13,0.1) 0%, rgba(7,16,13,0.85) 100%);
+      z-index: 1;
+    }
+
+    .project-info {
+      position: absolute;
+      left: 28px;
+      bottom: 25px;
+      z-index: 2;
+    }
+
+    .project-info span {
+      color: var(--green-light);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .project-info h3 {
+      font-size: 22px;
+      margin-top: 5px;
+    }
+
+    /* =========================================
+       PROCESS
+    ========================================= */
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      position: relative;
+    }
+
+    .process-card {
+      position: relative;
+      padding: 30px 25px;
+      border-top: 1px solid var(--border);
+    }
+
+    .process-number {
+      color: var(--green-light);
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 30px;
+    }
+
+    .process-card h3 {
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+
+    .process-card p {
+      color: var(--gray);
+      font-size: 12px;
+    }
+
+    /* =========================================
+       ABOUT
+    ========================================= */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-symbol {
+      width: 290px;
+      height: 290px;
+      margin: auto;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(
+          circle,
+          rgba(126,217,87,.2),
+          rgba(30,143,82,.05) 55%,
+          transparent 70%
+        );
+      border: 1px solid rgba(126,217,87,.18);
+      font-size: 90px;
+      color: var(--green-light);
+      font-weight: 800;
+    }
+
+    .about-symbol img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .about-content p {
+      color: var(--gray);
+      font-size: 14px;
+      margin-bottom: 25px;
+      max-width: 650px;
+    }
+
+    .values {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .value {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #cbd5d0;
+      font-size: 11px;
+    }
+
+    .value::before {
+      content: "✓";
+      width: 20px;
+      height: 20px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(126,217,87,.1);
+      color: var(--green-light);
+    }
+
+    /* =========================================
+       CTA
+    ========================================= */
+
+    .cta {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      padding: 90px 30px;
+      border-radius: 30px;
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(126,217,87,.16),
+          transparent 45%
+        ),
+        #0c1c16;
+      border: 1px solid var(--border);
+    }
+
+    .cta h2 {
+      max-width: 700px;
+      margin: auto auto 18px;
+      font-size: clamp(35px, 5vw, 58px);
+      line-height: 1;
+      letter-spacing: -2px;
+    }
+
+    .cta h2 span {
+      color: var(--green-light);
+    }
+
+    .cta p {
+      color: var(--gray);
+      max-width: 530px;
+      margin: 0 auto 30px;
+      font-size: 13px;
+    }
+
+    /* =========================================
+       CONTACT
+    ========================================= */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 60px;
+    }
+
+    .contact-info h3 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .contact-info > p {
+      color: var(--gray);
+      font-size: 13px;
+      margin-bottom: 35px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .contact-icon {
+      width: 42px;
+      height: 42px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: rgba(126,217,87,.08);
+      color: var(--green-light);
+    }
+
+    .contact-item small {
+      color: #718079;
+      display: block;
+      font-size: 10px;
+      margin-bottom: 3px;
+    }
+
+    .contact-item strong {
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 16px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .field label {
+      color: #b5c0bb;
+      font-size: 10px;
+      font-weight: 600;
+    }
+
+    .field input,
+    .field textarea {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,.08);
+      background: #0b1512;
+      color: white;
+      outline: none;
+      border-radius: 12px;
+      padding: 14px;
+      font-size: 12px;
+      transition: var(--transition);
+    }
+
+    .field textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .field input:focus,
+    .field textarea:focus {
+      border-color: rgba(126,217,87,.5);
+      box-shadow: 0 0 0 3px rgba(126,217,87,.05);
+    }
+
+    /* =========================================
+       FOOTER
+    ========================================= */
+
+    footer {
+      padding: 35px 0;
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .copyright {
+      color: #66736d;
+      font-size: 10px;
+    }
+
+    .socials {
+      display: flex;
+      gap: 9px;
+    }
+
+    .social {
+      width: 34px;
+      height: 34px;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 11px;
+      color: #aab5b0;
+      transition: var(--transition);
+    }
+
+    .social:hover {
+      color: var(--green-light);
+      border-color: var(--green-light);
+      transform: translateY(-3px);
+    }
+
+    /* =========================================
+       SCROLL REVEAL
+    ========================================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================================
+       RESPONSIVE
+    ========================================= */
+
+    @media (max-width: 950px) {
+
+      .nav-links {
+        position: fixed;
+        top: 82px;
+        right: -100%;
+        width: 280px;
+        height: calc(100vh - 82px);
+        background: #08120f;
+        border-left: 1px solid var(--border);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 35px;
+        gap: 25px;
+        transition: .4s ease;
+      }
+
+      .nav-links.active {
+        right: 0;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 130px;
+      }
+
+      .hero-visual {
+        height: 420px;
+      }
+
+      .browser {
+        max-width: 600px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-symbol {
+        width: 220px;
+        height: 220px;
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      section {
+        padding: 80px 0;
+      }
+
+      .hero h1 {
+        letter-spacing: -2.5px;
+      }
+
+      .hero-description {
+        font-size: 14px;
+      }
+
+      .hero-visual {
+        height: 330px;
+      }
+
+      .browser-content {
+        padding: 30px 22px 35px;
+      }
+
+      .browser-content h3 {
+        font-size: 24px;
+      }
+
+      .floating-card {
+        width: 150px;
+        left: -5px;
+        padding: 15px;
+      }
+
+      .services-grid,
+      .portfolio-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project,
+      .project-large {
+        min-height: 330px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================================
+       HEADER
+  ========================================= -->
+
+  <header id="header">
+    <div class="container navbar">
+
+      <a href="#home" class="logo">
+        <img src="Project 1.jpg" alt="Dandara Web Design Logo" class="logo-img" />
+        <div class="logo-text">
+          <strong>dandara</strong>
+          <span>web design</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Our Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
+        </ul>
+      </nav>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        ☰
+      </button>
+
+    </div>
+  </header>
+
+
+  <!-- =========================================
+       HERO
+  ========================================= -->
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="container hero-grid">
+
+        <div class="hero-content reveal">
+
+          <div class="eyebrow">
+            Independent Web Designer
+          </div>
+
+          <h1>
+            Ideas into
+            <span>Digital</span>
+            Experiences.
+          </h1>
+
+          <p class="hero-description">
+            I design and build clean, fast and responsive websites
+            that help businesses look better, communicate clearly
+            and grow online.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a href="#work" class="btn btn-primary">
+              Explore My Work →
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+              Start a Project
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-visual reveal">
+
+          <div class="browser">
+
+            <div class="browser-bar">
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+            </div>
+
+            <div class="browser-content">
+
+              <div class="mini-logo">
+                <img src="Project 1.jpg" alt="Dandara Logo" />
+              </div>
+
+              <h3>
+                Modern Websites
+                for a Better
+                <span>Digital Tomorrow.</span>
+              </h3>
+
+              <p>
+                Clean interfaces. Responsive layouts.
+                Fast performance. Thoughtful experiences.
+              </p>
+
+              <span class="fake-button">
+                Let's Build Something
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="floating-card">
+
+            <div class="number">100%</div>
+
+            <p>
+              Focused on clean design,
+              performance and details.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         SERVICES
+    ========================================= -->
+
+    <section id="services">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div class="eyebrow">
+            What I Do
+          </div>
+
+          <h2>
+            Everything your
+            <span>website</span> needs.
+          </h2>
+
+          <p>
+            From the first idea to the final pixel,
+            I create digital experiences designed
+            around your goals.
+          </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+          <div class="service-card reveal">
+
+            <div class="service-icon">
+              ◫
+            </div>
+
+            <h3>Website Design</h3>
+
+            <p>
+              Modern and responsive websites
+              designed to look great on every screen.
+            </p>
+
+          </div>
+
+
+          <div class="service-card reveal">
+
+            <div class="service-icon">
+              ◈
+            </div>
+
+            <h3>UI / UX Design</h3>
+
+            <p>
+              Simple interfaces and intuitive
+              experiences that people enjoy using.
+            </p>
+
+          </div>
+
+
+          <div class="service-card reveal">
+
+            <div class="service-icon">
+              &lt;/&gt;
+            </div>
+
+            <h3>Web Development</h3>
+
+            <p>
+              Clean, scalable and reliable code
+              built with performance in mind.
+            </p>
+
+          </div>
+
+
+          <div class="service-card reveal">
+
+            <div class="service-icon">
+              ✦
+            </div>
+
+            <h3>Brand Identity</h3>
+
+            <p>
+              Visual identities that make your
+              business recognizable and memorable.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         PORTFOLIO
+    ========================================= -->
+
+    <section id="work">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <div class="eyebrow">
+            Selected Work
+          </div>
+
+          <h2>
+            Designed to
+            <span>stand out.</span>
+          </h2>
+
+          <p>
+            A selection of digital concepts focused
+            on clarity, usability and strong visual identity.
+          </p>
+
+        </div>
+
+
+        <div class="portfolio-grid">
+
+          <div class="project project-large reveal">
+
+            <div class="project-bg"></div>
+
+            <img src="Project 1.jpg" alt="Modern Business" class="project-img" />
+
+            <div class="project-overlay"></div>
+
+            <div class="project-info">
+              <span>Web Design</span>
+              <h3>Modern Business</h3>
+            </div>
+
+          </div>
+
+
+          <div class="project reveal">
+
+            <div class="project-bg"></div>
+
+            <img src="Project 1.jpg" alt="Digital Platform" class="project-img" />
+
+            <div class="project-overlay"></div>
+
+            <div class="project-info">
+              <span>UI / UX</span>
+              <h3>Digital Platform</h3>
+            </div>
+
+          </div>
+
+
+          <div class="project reveal">
+
+            <div class="project-bg"></div>
+
+            <img src="Project 1.jpg" alt="Creative Studio" class="project-img" />
+
+            <div class="project-overlay"></div>
+
+            <div class="project-info">
+              <span>Brand Identity</span>
+              <h3>Creative Studio</h3>
+            </div>
+
+          </div>
+
+
+          <div class="project project-large reveal">
+
+            <div class="project-bg"></div>
+
+            <img src="Project 1.jpg" alt="Startup Website" class="project-img" />
+
+            <div class="project-overlay"></div>
+
+            <div class="project-info">
+              <span>Development</span>
+              <h3>Startup Website</h3>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         PROCESS
+    ========================================= -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="section-heading center reveal">
+
+          <div class="eyebrow">
+            My Process
+          </div>
+
+          <h2>
+            From idea to
+            <span>reality.</span>
+          </h2>
+
+          <p>
+            A simple process that keeps every project
+            focused, transparent and moving forward.
+          </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+          <div class="process-card reveal">
+
+            <div class="process-number">01 / DISCOVER</div>
+
+            <h3>Understand</h3>
+
+            <p>
+              We define your goals, audience,
+              requirements and project direction.
+            </p>
+
+          </div>
+
+
+          <div class="process-card reveal">
+
+            <div class="process-number">02 / DESIGN</div>
+
+            <h3>Design</h3>
+
+            <p>
+              I turn the strategy into a clear
+              and memorable visual experience.
+            </p>
+
+          </div>
+
+
+          <div class="process-card reveal">
+
+            <div class="process-number">03 / BUILD</div>
+
+            <h3>Develop</h3>
+
+            <p>
+              Your design becomes a fast,
+              responsive and functional website.
+            </p>
+
+          </div>
+
+
+          <div class="process-card reveal">
+
+            <div class="process-number">04 / LAUNCH</div>
+
+            <h3>Launch</h3>
+
+            <p>
+              We test, refine and prepare your
+              website for the real world.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         ABOUT
+    ========================================= -->
+
+    <section id="about">
+
+      <div class="container about-grid">
+
+        <div class="about-symbol reveal">
+          <img src="Project 1.jpg" alt="Dandara Symbol" />
+        </div>
+
+
+        <div class="about-content reveal">
+
+          <div class="eyebrow">
+            About Dandara
+          </div>
+
+          <h2 class="section-heading" style="margin-bottom:20px;">
+            Small studio.
+            <span style="color:var(--green-light);">
+              Big ideas.
+            </span>
+          </h2>
+
+          <p>
+            Dandara Web Design is an independent creative
+            web design studio focused on building modern
+            digital experiences for businesses, brands
+            and individuals.
+          </p>
+
+          <p>
+            Every project receives direct attention,
+            thoughtful design and clean development —
+            without unnecessary complexity.
+          </p>
+
+
+          <div class="values">
+
+            <div class="value">
+              Clean Design
+            </div>
+
+            <div class="value">
+              Fast Performance
+            </div>
+
+            <div class="value">
+              Responsive
+            </div>
+
+            <div class="value">
+              Personal Attention
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         CTA
+    ========================================= -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="cta reveal">
+
+          <h2>
+            Have an idea?
+            <span>Let's build it.</span>
+          </h2>
+
+          <p>
+            Tell me what you're imagining and
+            let's turn it into something people
+            remember.
+          </p>
+
+          <a href="#contact" class="btn btn-primary">
+            Start a Project →
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         CONTACT
+    ========================================= -->
+
+    <section id="contact">
+
+      <div class="container contact-grid">
+
+        <div class="contact-info reveal">
+
+          <div class="eyebrow">
+            Get In Touch
+          </div>
+
+          <h3>
+            Let's create
+            something great.
+          </h3>
+
+          <p>
+            Have a website idea, a new business,
+            or an existing website that needs a fresh look?
+            Send me a message.
+          </p>
+
+
+          <div class="contact-item">
+
+            <div class="contact-icon">
+              @
+            </div>
+
+            <div>
+              <small>Email</small>
+              <strong>
+                dandara.webdesign@gmail.com
+              </strong>
+            </div>
+
+          </div>
+
+
+          <div class="contact-item">
+
+            <div class="contact-icon">
+              ◉
+            </div>
+
+            <div>
+              <small>Location</small>
+              <strong>Sudan</strong>
+            </div>
+
+          </div>
+
+
+          <div class="contact-item">
+
+            <div class="contact-icon">
+              ↗
+            </div>
+
+            <div>
+              <small>Response</small>
+              <strong>Usually within 24 hours</strong>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <form class="contact-form reveal" id="contactForm">
+
+          <div class="form-row">
+
+            <div class="field">
+              <label>Your Name</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="John Doe"
+                required
+              />
+            </div>
+
+            <div class="field">
+              <label>Email Address</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+
+          </div>
+
+
+          <div class="field">
+
+            <label>Project Type</label>
+
+            <input
+              type="text"
+              id="project"
+              placeholder="Website, UI/UX, Branding..."
+              required
+            />
+
+          </div>
+
+
+          <div class="field">
+
+            <label>Tell me about your project</label>
+
+            <textarea
+              id="message"
+              placeholder="Tell me a little about your idea..."
+              required
+            ></textarea>
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="btn btn-primary"
+            style="border:none;"
+          >
+            Send Message →
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================
+       FOOTER
+  ========================================= -->
+
+  <footer>
+
+    <div class="container footer-content">
+
+      <div class="copyright">
+        © <span id="year"></span> Dandara Web Design.
+        All rights reserved.
+      </div>
+
+      <div class="socials">
+
+        <a href="#" class="social">IG</a>
+        <a href="#" class="social">IN</a>
+        <a href="#" class="social">X</a>
+        <a href="#" class="social">WA</a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================
+       JAVASCRIPT
+  ========================================= -->
+
+  <script>
+
+    /* ================================
+       HEADER SCROLL
+    ================================= */
+
+    const header = document.getElementById("header");
+
+    window.addEventListener("scroll", () => {
+
+      if (window.scrollY > 30) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+
+    });
+
+
+    /* ================================
+       MOBILE MENU
+    ================================= */
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+
+      navLinks.classList.toggle("active");
+
+      menuBtn.textContent =
+        navLinks.classList.contains("active")
+          ? "×"
+          : "☰";
+
+    });
+
+
+    /* CLOSE MENU AFTER CLICK */
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+        menuBtn.textContent = "☰";
+
+      });
+
+    });
+
+
+    /* ================================
+       SCROLL REVEAL
+    ================================= */
+
+    const observer = new IntersectionObserver(
+      entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add("visible");
+
+            observer.unobserve(entry.target);
+
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+
+    document
+      .querySelectorAll(".reveal")
+      .forEach(element => observer.observe(element));
+
+
+    /* ================================
+       CONTACT FORM
+    ================================= */
+
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      const name =
+        document.getElementById("name").value;
+
+      const email =
+        document.getElementById("email").value;
+
+      const project =
+        document.getElementById("project").value;
+
+      const message =
+        document.getElementById("message").value;
+
+
+      const whatsappMessage =
+        `Hello Dandara Web Design!
+
+Name: ${name}
+
+Email: ${email}
+
+Project: ${project}
+
+Message:
+${message}`;
+
+      const phoneNumber = "249912345678";
+
+      const whatsappURL =
+        `https://wa.me/${phoneNumber}?text=${
+          encodeURIComponent(whatsappMessage)
+        }`;
+
+
+      window.open(whatsappURL, "_blank");
+
+    });
+
+
+    /* ================================
+       CURRENT YEAR
+    ================================= */
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+  </script>
+
+</body>
+</html>
       --white: #F4F9F3;
       --gray: #A9B8B1;
       --border: rgba(126, 217, 87, 0.15);
