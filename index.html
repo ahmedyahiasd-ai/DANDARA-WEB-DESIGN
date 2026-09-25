@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta name="google-site-verification" content="ANwgYh4DSNMwj-yYJSh_kTmqQoFfr6UaluSE_pOtqik" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Dandara Web Design | Modern Websites for a Better Digital Tomorrow</title>
+  <title id="pageTitle">Dandara for Web Design | Modern Websites for a Better Digital Tomorrow</title>
 
   <meta
+    id="pageDesc"
     name="description"
-    content="Dandara Web Design creates modern, responsive and high-performance websites for businesses and individuals."
+    content="Dandara for Web Design creates modern, responsive and high-performance websites for businesses and individuals."
   />
 
   <!-- =========================================
@@ -17,7 +18,7 @@
   ========================================= -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://dandara-web-design.vercel.app/" />
-  <meta property="og:title" content="Dandara Web Design | Modern Websites" />
+  <meta property="og:title" content="Dandara for Web Design | Modern Websites" />
   <meta property="og:description" content="I design and build clean, fast and responsive websites for businesses and individuals." />
   <meta property="og:image" content="https://dandara-web-design.vercel.app/Project%201.png" />
   <meta property="og:image:width" content="1200" />
@@ -25,7 +26,7 @@
 
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Dandara Web Design | Modern Websites" />
+  <meta name="twitter:title" content="Dandara for Web Design | Modern Websites" />
   <meta name="twitter:description" content="I design and build clean, fast and responsive websites for businesses and individuals." />
   <meta name="twitter:image" content="https://dandara-web-design.vercel.app/Project%201.png" />
 
@@ -33,14 +34,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
 
   <style>
     /* =========================================
-       DANDARA WEB DESIGN
-       BRAND COLORS
+       DANDARA FOR WEB DESIGN - BRAND COLORS
     ========================================= */
 
     :root {
@@ -62,10 +62,6 @@
       --transition: 0.3s ease;
     }
 
-    /* =========================================
-       RESET
-    ========================================= */
-
     * {
       margin: 0;
       padding: 0;
@@ -77,7 +73,7 @@
     }
 
     body {
-      font-family: "Montserrat", sans-serif;
+      font-family: "Montserrat", "Cairo", sans-serif;
       background: var(--black);
       color: var(--white);
       line-height: 1.6;
@@ -105,9 +101,7 @@
       margin: auto;
     }
 
-    /* =========================================
-       BACKGROUND EFFECT
-    ========================================= */
+    /* BACKGROUND EFFECT */
 
     body::before {
       content: "";
@@ -139,9 +133,7 @@
       z-index: -1;
     }
 
-    /* =========================================
-       HEADER
-    ========================================= */
+    /* HEADER */
 
     header {
       position: fixed;
@@ -164,8 +156,6 @@
       align-items: center;
       justify-content: space-between;
     }
-
-    /* LOGO */
 
     .logo {
       display: flex;
@@ -195,17 +185,15 @@
     .logo-text span {
       color: var(--green-light);
       font-size: 9px;
-      letter-spacing: 4px;
+      letter-spacing: 3px;
       margin-top: 5px;
       font-weight: 600;
     }
 
-    /* NAVIGATION */
-
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 34px;
+      gap: 25px;
       list-style: none;
     }
 
@@ -221,7 +209,7 @@
     }
 
     .nav-cta {
-      padding: 11px 19px;
+      padding: 9px 16px;
       border: 1px solid rgba(126, 217, 87, 0.4);
       border-radius: 50px;
       color: var(--green-light) !important;
@@ -232,7 +220,26 @@
       color: var(--black) !important;
     }
 
-    /* MOBILE MENU BUTTON */
+    /* LANGUAGE BUTTON */
+    .lang-btn {
+      background: rgba(126, 217, 87, 0.1);
+      border: 1px solid var(--border);
+      color: var(--green-light);
+      padding: 7px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 700;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .lang-btn:hover {
+      background: var(--green-light);
+      color: var(--black);
+    }
 
     .menu-btn {
       display: none;
@@ -249,9 +256,7 @@
       justify-content: center;
     }
 
-    /* =========================================
-       HERO
-    ========================================= */
+    /* HERO */
 
     .hero {
       min-height: 100vh;
@@ -292,9 +297,9 @@
     }
 
     .hero h1 {
-      font-size: clamp(45px, 6vw, 78px);
-      line-height: 0.98;
-      letter-spacing: -4px;
+      font-size: clamp(40px, 5.5vw, 72px);
+      line-height: 1.05;
+      letter-spacing: -2px;
       margin-bottom: 27px;
     }
 
@@ -349,8 +354,6 @@
       color: var(--green-light);
     }
 
-    /* HERO VISUAL */
-
     .hero-visual {
       position: relative;
       height: 500px;
@@ -360,16 +363,13 @@
       position: absolute;
       width: 100%;
       max-width: 560px;
-      right: 0;
+      inset-inline-end: 0;
       top: 30px;
       background: #101b17;
       border: 1px solid rgba(126, 217, 87, 0.16);
       border-radius: 20px;
       overflow: hidden;
-      box-shadow:
-        0 40px 100px rgba(0, 0, 0, 0.5),
-        0 0 80px rgba(30, 143, 82, 0.1);
-      transform: perspective(1200px) rotateY(-5deg) rotateX(2deg);
+      box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5), 0 0 80px rgba(30, 143, 82, 0.1);
     }
 
     .browser-bar {
@@ -391,13 +391,7 @@
 
     .browser-content {
       padding: 45px 38px 55px;
-      background:
-        radial-gradient(
-          circle at 85% 20%,
-          rgba(126,217,87,.12),
-          transparent 30%
-        ),
-        linear-gradient(145deg, #09271e, #07100d);
+      background: radial-gradient(circle at 85% 20%, rgba(126,217,87,.12), transparent 30%), linear-gradient(145deg, #09271e, #07100d);
     }
 
     .mini-logo {
@@ -410,8 +404,8 @@
     }
 
     .browser-content h3 {
-      font-size: 34px;
-      line-height: 1.05;
+      font-size: 30px;
+      line-height: 1.1;
       max-width: 380px;
       margin-bottom: 18px;
     }
@@ -422,7 +416,7 @@
 
     .browser-content p {
       color: #8ea199;
-      font-size: 11px;
+      font-size: 12px;
       max-width: 340px;
       margin-bottom: 25px;
     }
@@ -433,14 +427,14 @@
       background: var(--green-light);
       color: #07100d;
       border-radius: 30px;
-      font-size: 10px;
+      font-size: 11px;
       font-weight: 800;
     }
 
     .floating-card {
       position: absolute;
       bottom: 10px;
-      left: -20px;
+      inset-inline-start: -20px;
       width: 190px;
       padding: 20px;
       border-radius: 18px;
@@ -458,13 +452,11 @@
 
     .floating-card p {
       color: var(--gray);
-      font-size: 10px;
+      font-size: 11px;
       margin-top: 3px;
     }
 
-    /* =========================================
-       SECTION
-    ========================================= */
+    /* SECTIONS */
 
     section {
       padding: 110px 0;
@@ -482,9 +474,9 @@
     }
 
     .section-heading h2 {
-      font-size: clamp(32px, 4vw, 52px);
-      line-height: 1.05;
-      letter-spacing: -2px;
+      font-size: clamp(30px, 4vw, 50px);
+      line-height: 1.1;
+      letter-spacing: -1px;
       margin-bottom: 17px;
     }
 
@@ -497,9 +489,7 @@
       font-size: 14px;
     }
 
-    /* =========================================
-       SERVICES
-    ========================================= */
+    /* SERVICES */
 
     .services-grid {
       display: grid;
@@ -509,11 +499,7 @@
 
     .service-card {
       padding: 30px 25px;
-      background: linear-gradient(
-        145deg,
-        rgba(30,143,82,.10),
-        rgba(255,255,255,.015)
-      );
+      background: linear-gradient(145deg, rgba(30,143,82,.10), rgba(255,255,255,.015));
       border: 1px solid var(--border);
       border-radius: var(--radius);
       transition: var(--transition);
@@ -522,11 +508,7 @@
     .service-card:hover {
       transform: translateY(-8px);
       border-color: rgba(126,217,87,.4);
-      background: linear-gradient(
-        145deg,
-        rgba(30,143,82,.16),
-        rgba(255,255,255,.025)
-      );
+      background: linear-gradient(145deg, rgba(30,143,82,.16), rgba(255,255,255,.025));
     }
 
     .service-icon {
@@ -553,9 +535,7 @@
       line-height: 1.8;
     }
 
-    /* =========================================
-       WORK / PORTFOLIO (CSS MOCKUPS)
-    ========================================= */
+    /* PORTFOLIO */
 
     .portfolio-grid {
       display: grid;
@@ -583,17 +563,7 @@
     .project-bg {
       position: absolute;
       inset: 0;
-      background:
-        radial-gradient(
-          circle at 80% 20%,
-          rgba(126,217,87,.18),
-          transparent 40%
-        ),
-        linear-gradient(
-          145deg,
-          #123f30,
-          #07100d 80%
-        );
+      background: radial-gradient(circle at 80% 20%, rgba(126,217,87,.18), transparent 40%), linear-gradient(145deg, #123f30, #07100d 80%);
       transition: transform .6s ease;
       z-index: 0;
     }
@@ -737,15 +707,12 @@
       margin-top: 5px;
     }
 
-    /* =========================================
-       PROCESS
-    ========================================= */
+    /* PROCESS */
 
     .process-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 20px;
-      position: relative;
     }
 
     .process-card {
@@ -771,9 +738,7 @@
       font-size: 12px;
     }
 
-    /* =========================================
-       ABOUT
-    ========================================= */
+    /* ABOUT */
 
     .about-grid {
       display: grid;
@@ -789,17 +754,8 @@
       border-radius: 50%;
       display: grid;
       place-items: center;
-      background:
-        radial-gradient(
-          circle,
-          rgba(126,217,87,.2),
-          rgba(30,143,82,.05) 55%,
-          transparent 70%
-        );
+      background: radial-gradient(circle, rgba(126,217,87,.2), rgba(30,143,82,.05) 55%, transparent 70%);
       border: 1px solid rgba(126,217,87,.18);
-      font-size: 90px;
-      color: var(--green-light);
-      font-weight: 800;
     }
 
     .about-symbol img {
@@ -827,7 +783,7 @@
       align-items: center;
       gap: 8px;
       color: #cbd5d0;
-      font-size: 11px;
+      font-size: 12px;
     }
 
     .value::before {
@@ -841,9 +797,7 @@
       color: var(--green-light);
     }
 
-    /* =========================================
-       CTA
-    ========================================= */
+    /* CTA */
 
     .cta {
       position: relative;
@@ -851,22 +805,16 @@
       text-align: center;
       padding: 90px 30px;
       border-radius: 30px;
-      background:
-        radial-gradient(
-          circle at 50% 0%,
-          rgba(126,217,87,.16),
-          transparent 45%
-        ),
-        #0c1c16;
+      background: radial-gradient(circle at 50% 0%, rgba(126,217,87,.16), transparent 45%), #0c1c16;
       border: 1px solid var(--border);
     }
 
     .cta h2 {
       max-width: 700px;
       margin: auto auto 18px;
-      font-size: clamp(35px, 5vw, 58px);
-      line-height: 1;
-      letter-spacing: -2px;
+      font-size: clamp(32px, 5vw, 54px);
+      line-height: 1.1;
+      letter-spacing: -1px;
     }
 
     .cta h2 span {
@@ -880,9 +828,7 @@
       font-size: 13px;
     }
 
-    /* =========================================
-       CONTACT & FORM
-    ========================================= */
+    /* CONTACT */
 
     .contact-grid {
       display: grid;
@@ -949,7 +895,7 @@
 
     .field label {
       color: #b5c0bb;
-      font-size: 10px;
+      font-size: 11px;
       font-weight: 600;
     }
 
@@ -977,7 +923,6 @@
       box-shadow: 0 0 0 3px rgba(126,217,87,.05);
     }
 
-    /* BUTTONS IN FORM */
     .form-actions {
       display: flex;
       gap: 12px;
@@ -996,9 +941,7 @@
       transform: translateY(-3px);
     }
 
-    /* =========================================
-       FOOTER
-    ========================================= */
+    /* FOOTER */
 
     footer {
       padding: 35px 0;
@@ -1014,7 +957,7 @@
 
     .copyright {
       color: #66736d;
-      font-size: 10px;
+      font-size: 11px;
     }
 
     .socials {
@@ -1040,9 +983,7 @@
       transform: translateY(-3px);
     }
 
-    /* =========================================
-       SCROLL REVEAL
-    ========================================= */
+    /* SCROLL REVEAL */
 
     .reveal {
       opacity: 0;
@@ -1055,12 +996,9 @@
       transform: translateY(0);
     }
 
-    /* =========================================
-       RESPONSIVE & MOBILE MENU FIX
-    ========================================= */
+    /* RESPONSIVE */
 
     @media (max-width: 950px) {
-
       .menu-btn {
         display: flex;
       }
@@ -1068,23 +1006,23 @@
       .nav-links {
         position: fixed;
         top: 82px;
-        right: -100%;
+        inset-inline-end: -100%;
         width: 280px;
         height: calc(100vh - 82px);
         background: rgba(8, 18, 15, 0.98);
         backdrop-filter: blur(20px);
-        border-left: 1px solid var(--border);
+        border-inline-start: 1px solid var(--border);
         flex-direction: column;
         align-items: flex-start;
         padding: 40px 30px;
         gap: 25px;
-        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: inset-inline-end 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 1000;
         box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
       }
 
       .nav-links.active {
-        right: 0 !important;
+        inset-inline-end: 0 !important;
       }
 
       .hero-grid,
@@ -1107,10 +1045,7 @@
         transform: translateX(-50%);
       }
 
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
+      .services-grid,
       .process-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -1122,13 +1057,8 @@
     }
 
     @media (max-width: 650px) {
-
       section {
         padding: 80px 0;
-      }
-
-      .hero h1 {
-        letter-spacing: -2.5px;
       }
 
       .hero-description {
@@ -1149,7 +1079,7 @@
 
       .floating-card {
         width: 150px;
-        left: -5px;
+        inset-inline-start: -5px;
         padding: 15px;
       }
 
@@ -1186,28 +1116,30 @@
 
 <body>
 
-  <!-- =========================================
-       HEADER
-  ========================================= -->
-
+  <!-- HEADER -->
   <header id="header">
     <div class="container navbar">
 
       <a href="#home" class="logo">
-        <img src="Project 1.png" alt="Dandara Web Design Logo" class="logo-img" />
+        <img id="logoImg" src="Project 1.png" alt="Dandara for Web Design Logo" class="logo-img" />
         <div class="logo-text">
           <strong>dandara</strong>
-          <span>web design</span>
+          <span>for web design</span>
         </div>
       </a>
 
       <nav>
         <ul class="nav-links" id="navLinks">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#work">Our Work</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
+          <li><a href="#home" data-key="nav_home">Home</a></li>
+          <li><a href="#services" data-key="nav_services">Services</a></li>
+          <li><a href="#work" data-key="nav_work">Our Work</a></li>
+          <li><a href="#about" data-key="nav_about">About</a></li>
+          <li><a href="#contact" class="nav-cta" data-key="nav_contact">Let's Talk</a></li>
+          <li>
+            <button class="lang-btn" id="langToggle">
+              🌐 <span id="langText">العربية</span>
+            </button>
+          </li>
         </ul>
       </nav>
 
@@ -1219,53 +1151,42 @@
   </header>
 
 
-  <!-- =========================================
-       HERO
-  ========================================= -->
-
+  <!-- MAIN CONTENT -->
   <main>
 
+    <!-- HERO -->
     <section class="hero" id="home">
-
       <div class="container hero-grid">
 
         <div class="hero-content reveal">
-
-          <div class="eyebrow">
+          <div class="eyebrow" data-key="hero_eyebrow">
             Independent Web Designer
           </div>
 
-          <h1>
+          <h1 data-key="hero_title">
             Ideas into
             <span>Digital</span>
             Experiences.
           </h1>
 
-          <p class="hero-description">
+          <p class="hero-description" data-key="hero_desc">
             I design and build clean, fast and responsive websites
             that help businesses look better, communicate clearly
             and grow online.
           </p>
 
           <div class="hero-buttons">
-
-            <a href="#work" class="btn btn-primary">
+            <a href="#work" class="btn btn-primary" data-key="hero_btn_work">
               Explore My Work →
             </a>
-
-            <a href="#contact" class="btn btn-outline">
+            <a href="#contact" class="btn btn-outline" data-key="hero_btn_start">
               Start a Project
             </a>
-
           </div>
-
         </div>
 
-
         <div class="hero-visual reveal">
-
           <div class="browser">
-
             <div class="browser-bar">
               <span class="browser-dot"></span>
               <span class="browser-dot"></span>
@@ -1273,179 +1194,98 @@
             </div>
 
             <div class="browser-content">
-
               <div class="mini-logo">
-                <img src="Project 1.png" alt="Dandara Logo" />
+                <img id="miniLogoImg" src="Project 1.png" alt="Dandara for Web Design Logo Icon" />
               </div>
 
-              <h3>
-                Modern Websites
-                for a Better
-                <span>Digital Tomorrow.</span>
+              <h3 data-key="browser_title">
+                Modern Websites for a Better <span>Digital Tomorrow.</span>
               </h3>
 
-              <p>
-                Clean interfaces. Responsive layouts.
-                Fast performance. Thoughtful experiences.
+              <p data-key="browser_desc">
+                Clean interfaces. Responsive layouts. Fast performance. Thoughtful experiences.
               </p>
 
-              <span class="fake-button">
+              <span class="fake-button" data-key="browser_btn">
                 Let's Build Something
               </span>
-
             </div>
-
           </div>
-
 
           <div class="floating-card">
-
             <div class="number">100%</div>
-
-            <p>
-              Focused on clean design,
-              performance and details.
+            <p data-key="float_card_text">
+              Focused on clean design, performance and details.
             </p>
-
           </div>
-
         </div>
 
       </div>
-
     </section>
 
-
-    <!-- =========================================
-         SERVICES
-    ========================================= -->
-
+    <!-- SERVICES -->
     <section id="services">
-
       <div class="container">
 
         <div class="section-heading reveal">
-
-          <div class="eyebrow">
+          <div class="eyebrow" data-key="services_eyebrow">
             What I Do
           </div>
-
-          <h2>
-            Everything your
-            <span>website</span> needs.
+          <h2 data-key="services_title">
+            Everything your <span>website</span> needs.
           </h2>
-
-          <p>
-            From the first idea to the final pixel,
-            I create digital experiences designed
-            around your goals.
+          <p data-key="services_desc">
+            From the first idea to the final pixel, I create digital experiences designed around your goals.
           </p>
-
         </div>
 
-
         <div class="services-grid">
-
           <div class="service-card reveal">
-
-            <div class="service-icon">
-              ◫
-            </div>
-
-            <h3>Website Design</h3>
-
-            <p>
-              Modern and responsive websites
-              designed to look great on every screen.
-            </p>
-
+            <div class="service-icon">◫</div>
+            <h3 data-key="srv1_title">Website Design</h3>
+            <p data-key="srv1_desc">Modern and responsive websites designed to look great on every screen.</p>
           </div>
 
-
           <div class="service-card reveal">
-
-            <div class="service-icon">
-              ◈
-            </div>
-
-            <h3>UI / UX Design</h3>
-
-            <p>
-              Simple interfaces and intuitive
-              experiences that people enjoy using.
-            </p>
-
+            <div class="service-icon">◈</div>
+            <h3 data-key="srv2_title">UI / UX Design</h3>
+            <p data-key="srv2_desc">Simple interfaces and intuitive experiences that people enjoy using.</p>
           </div>
 
-
           <div class="service-card reveal">
-
-            <div class="service-icon">
-              &lt;/&gt;
-            </div>
-
-            <h3>Web Development</h3>
-
-            <p>
-              Clean, scalable and reliable code
-              built with performance in mind.
-            </p>
-
+            <div class="service-icon">&lt;/&gt;</div>
+            <h3 data-key="srv3_title">Web Development</h3>
+            <p data-key="srv3_desc">Clean, scalable and reliable code built with performance in mind.</p>
           </div>
 
-
           <div class="service-card reveal">
-
-            <div class="service-icon">
-              ✦
-            </div>
-
-            <h3>Brand Identity</h3>
-
-            <p>
-              Visual identities that make your
-              business recognizable and memorable.
-            </p>
-
+            <div class="service-icon">✦</div>
+            <h3 data-key="srv4_title">Brand Identity</h3>
+            <p data-key="srv4_desc">Visual identities that make your business recognizable and memorable.</p>
           </div>
-
         </div>
 
       </div>
-
     </section>
 
-
-    <!-- =========================================
-         PORTFOLIO (CSS DRAWN MOCKUPS)
-    ========================================= -->
-
+    <!-- PORTFOLIO -->
     <section id="work">
-
       <div class="container">
 
         <div class="section-heading reveal">
-
-          <div class="eyebrow">
+          <div class="eyebrow" data-key="work_eyebrow">
             Selected Work
           </div>
-
-          <h2>
-            Designed to
-            <span>stand out.</span>
+          <h2 data-key="work_title">
+            Designed to <span>stand out.</span>
           </h2>
-
-          <p>
-            A selection of digital concepts focused
-            on clarity, usability and strong visual identity.
+          <p data-key="work_desc">
+            A selection of digital concepts focused on clarity, usability and strong visual identity.
           </p>
-
         </div>
 
-
         <div class="portfolio-grid">
-
-          <!-- PROJECT 1: Modern Business Mockup -->
+          <!-- PROJECT 1 -->
           <div class="project project-large reveal">
             <div class="project-bg"></div>
 
@@ -1479,12 +1319,12 @@
             <div class="project-overlay"></div>
 
             <div class="project-info">
-              <span>Web Design</span>
-              <h3>Modern Business</h3>
+              <span data-key="p1_cat">Web Design</span>
+              <h3 data-key="p1_title">Modern Business</h3>
             </div>
           </div>
 
-          <!-- PROJECT 2: Digital Platform Dashboard Mockup -->
+          <!-- PROJECT 2 -->
           <div class="project reveal">
             <div class="project-bg"></div>
 
@@ -1513,12 +1353,12 @@
             <div class="project-overlay"></div>
 
             <div class="project-info">
-              <span>UI / UX</span>
-              <h3>Digital Platform</h3>
+              <span data-key="p2_cat">UI / UX</span>
+              <h3 data-key="p2_title">Digital Platform</h3>
             </div>
           </div>
 
-          <!-- PROJECT 3: Creative Studio Grid Mockup -->
+          <!-- PROJECT 3 -->
           <div class="project reveal">
             <div class="project-bg"></div>
 
@@ -1542,12 +1382,12 @@
             <div class="project-overlay"></div>
 
             <div class="project-info">
-              <span>Brand Identity</span>
-              <h3>Creative Studio</h3>
+              <span data-key="p3_cat">Brand Identity</span>
+              <h3 data-key="p3_title">Creative Studio</h3>
             </div>
           </div>
 
-          <!-- PROJECT 4: Startup Landing Mockup -->
+          <!-- PROJECT 4 -->
           <div class="project project-large reveal">
             <div class="project-bg"></div>
 
@@ -1582,286 +1422,161 @@
             <div class="project-overlay"></div>
 
             <div class="project-info">
-              <span>Development</span>
-              <h3>Startup Website</h3>
+              <span data-key="p4_cat">Development</span>
+              <h3 data-key="p4_title">Startup Website</h3>
             </div>
           </div>
-
         </div>
 
       </div>
-
     </section>
 
-
-    <!-- =========================================
-         PROCESS
-    ========================================= -->
-
+    <!-- PROCESS -->
     <section>
-
       <div class="container">
 
         <div class="section-heading center reveal">
-
-          <div class="eyebrow">
+          <div class="eyebrow" data-key="process_eyebrow">
             My Process
           </div>
-
-          <h2>
-            From idea to
-            <span>reality.</span>
+          <h2 data-key="process_title">
+            From idea to <span>reality.</span>
           </h2>
-
-          <p>
-            A simple process that keeps every project
-            focused, transparent and moving forward.
+          <p data-key="process_desc">
+            A simple process that keeps every project focused, transparent and moving forward.
           </p>
-
         </div>
 
-
         <div class="process-grid">
-
           <div class="process-card reveal">
-
-            <div class="process-number">01 / DISCOVER</div>
-
-            <h3>Understand</h3>
-
-            <p>
-              We define your goals, audience,
-              requirements and project direction.
-            </p>
-
+            <div class="process-number" data-key="pr1_num">01 / DISCOVER</div>
+            <h3 data-key="pr1_title">Understand</h3>
+            <p data-key="pr1_desc">We define your goals, audience, requirements and project direction.</p>
           </div>
 
-
           <div class="process-card reveal">
-
-            <div class="process-number">02 / DESIGN</div>
-
-            <h3>Design</h3>
-
-            <p>
-              I turn the strategy into a clear
-              and memorable visual experience.
-            </p>
-
+            <div class="process-number" data-key="pr2_num">02 / DESIGN</div>
+            <h3 data-key="pr2_title">Design</h3>
+            <p data-key="pr2_desc">I turn the strategy into a clear and memorable visual experience.</p>
           </div>
 
-
           <div class="process-card reveal">
-
-            <div class="process-number">03 / BUILD</div>
-
-            <h3>Develop</h3>
-
-            <p>
-              Your design becomes a fast,
-              responsive and functional website.
-            </p>
-
+            <div class="process-number" data-key="pr3_num">03 / BUILD</div>
+            <h3 data-key="pr3_title">Develop</h3>
+            <p data-key="pr3_desc">Your design becomes a fast, responsive and functional website.</p>
           </div>
 
-
           <div class="process-card reveal">
-
-            <div class="process-number">04 / LAUNCH</div>
-
-            <h3>Launch</h3>
-
-            <p>
-              We test, refine and prepare your
-              website for the real world.
-            </p>
-
+            <div class="process-number" data-key="pr4_num">04 / LAUNCH</div>
+            <h3 data-key="pr4_title">Launch</h3>
+            <p data-key="pr4_desc">We test, refine and prepare your website for the real world.</p>
           </div>
-
         </div>
 
       </div>
-
     </section>
 
-
-    <!-- =========================================
-         ABOUT
-    ========================================= -->
-
+    <!-- ABOUT -->
     <section id="about">
-
       <div class="container about-grid">
 
         <div class="about-symbol reveal">
-          <img src="Project 1.png" alt="Dandara Symbol" />
+          <img id="aboutSymbolImg" src="Project 1.png" alt="Dandara for Web Design Symbol Icon" />
         </div>
 
-
         <div class="about-content reveal">
-
-          <div class="eyebrow">
+          <div class="eyebrow" data-key="about_eyebrow">
             About Dandara
           </div>
 
-          <h2 class="section-heading" style="margin-bottom:20px;">
-            Small studio.
-            <span style="color:var(--green-light);">
-              Big ideas.
-            </span>
+          <h2 class="section-heading" style="margin-bottom:20px;" data-key="about_title">
+            Small studio. <span style="color:var(--green-light);">Big ideas.</span>
           </h2>
 
-          <p>
-            Dandara Web Design is an independent creative
-            web design studio focused on building modern
-            digital experiences for businesses, brands
-            and individuals.
+          <p data-key="about_p1">
+            Dandara for Web Design is an independent creative web design studio focused on building modern digital experiences for businesses, brands and individuals.
           </p>
 
-          <p>
-            Every project receives direct attention,
-            thoughtful design and clean development —
-            without unnecessary complexity.
+          <p data-key="about_p2">
+            Every project receives direct attention, thoughtful design and clean development — without unnecessary complexity.
           </p>
-
 
           <div class="values">
-
-            <div class="value">
-              Clean Design
-            </div>
-
-            <div class="value">
-              Fast Performance
-            </div>
-
-            <div class="value">
-              Responsive
-            </div>
-
-            <div class="value">
-              Personal Attention
-            </div>
-
+            <div class="value" data-key="val_1">Clean Design</div>
+            <div class="value" data-key="val_2">Fast Performance</div>
+            <div class="value" data-key="val_3">Responsive</div>
+            <div class="value" data-key="val_4">Personal Attention</div>
           </div>
-
         </div>
 
       </div>
-
     </section>
 
-
-    <!-- =========================================
-         CTA
-    ========================================= -->
-
+    <!-- CTA -->
     <section>
-
       <div class="container">
-
         <div class="cta reveal">
-
-          <h2>
-            Have an idea?
-            <span>Let's build it.</span>
+          <h2 data-key="cta_title">
+            Have an idea? <span>Let's build it.</span>
           </h2>
-
-          <p>
-            Tell me what you're imagining and
-            let's turn it into something people
-            remember.
+          <p data-key="cta_desc">
+            Tell me what you're imagining and let's turn it into something people remember.
           </p>
-
-          <a href="#contact" class="btn btn-primary">
+          <a href="#contact" class="btn btn-primary" data-key="cta_btn">
             Start a Project →
           </a>
-
         </div>
-
       </div>
-
     </section>
 
-
-    <!-- =========================================
-         CONTACT
-    ========================================= -->
-
+    <!-- CONTACT -->
     <section id="contact">
-
       <div class="container contact-grid">
 
         <div class="contact-info reveal">
-
-          <div class="eyebrow">
+          <div class="eyebrow" data-key="contact_eyebrow">
             Get In Touch
           </div>
 
-          <h3>
-            Let's create
-            something great.
+          <h3 data-key="contact_title">
+            Let's create something great.
           </h3>
 
-          <p>
-            Have a website idea, a new business,
-            or an existing website that needs a fresh look?
-            Send me a message.
+          <p data-key="contact_desc">
+            Have a website idea, a new business, or an existing website that needs a fresh look? Send me a message.
           </p>
 
-
           <div class="contact-item">
-
-            <div class="contact-icon">
-              @
-            </div>
-
+            <div class="contact-icon">@</div>
             <div>
-              <small>Email</small>
+              <small data-key="lbl_email">Email</small>
               <strong>
                 <a href="mailto:ahmed.yahia.sd@gmail.com">ahmed.yahia.sd@gmail.com</a>
               </strong>
             </div>
-
           </div>
-
 
           <div class="contact-item">
-
-            <div class="contact-icon">
-              ◉
-            </div>
-
+            <div class="contact-icon">◉</div>
             <div>
-              <small>Location</small>
-              <strong>Sudan</strong>
+              <small data-key="lbl_location">Location</small>
+              <strong data-key="val_location">Sudan</strong>
             </div>
-
           </div>
-
 
           <div class="contact-item">
-
-            <div class="contact-icon">
-              ↗
-            </div>
-
+            <div class="contact-icon">↗</div>
             <div>
-              <small>Response</small>
-              <strong>Usually within 24 hours</strong>
+              <small data-key="lbl_response">Response</small>
+              <strong data-key="val_response">Usually within 24 hours</strong>
             </div>
-
           </div>
-
         </div>
 
-
         <form class="contact-form reveal" id="contactForm">
-
           <div class="form-row">
-
             <div class="field">
-              <label>Your Name</label>
+              <label data-key="form_lbl_name">Your Name</label>
               <input
                 type="text"
                 id="name"
@@ -1871,7 +1586,7 @@
             </div>
 
             <div class="field">
-              <label>Email Address</label>
+              <label data-key="form_lbl_email">Email Address</label>
               <input
                 type="email"
                 id="email"
@@ -1879,42 +1594,33 @@
                 required
               />
             </div>
-
           </div>
 
-
           <div class="field">
-
-            <label>Project Type</label>
-
+            <label data-key="form_lbl_project">Project Type</label>
             <input
               type="text"
               id="project"
               placeholder="Website, UI/UX, Branding..."
               required
             />
-
           </div>
 
-
           <div class="field">
-
-            <label>Tell me about your project</label>
-
+            <label data-key="form_lbl_msg">Tell me about your project</label>
             <textarea
               id="message"
               placeholder="Tell me a little about your idea..."
               required
             ></textarea>
-
           </div>
-
 
           <div class="form-actions">
             <button
               type="submit"
               class="btn btn-primary"
               style="border:none;"
+              data-key="btn_send_email"
             >
               Send via Email ✉
             </button>
@@ -1923,67 +1629,283 @@
               href="https://wa.me/249965517312?text=Hello%20Dandara!%20I%20have%20an%20inquiry%20about%20your%20services." 
               target="_blank" 
               class="btn btn-whatsapp"
+              data-key="btn_whatsapp"
             >
               Quick Inquiry (WhatsApp) 💬
             </a>
           </div>
-
         </form>
 
       </div>
-
     </section>
 
   </main>
 
-
-  <!-- =========================================
-       FOOTER
-  ========================================= -->
-
+  <!-- FOOTER -->
   <footer>
-
     <div class="container footer-content">
-
       <div class="copyright">
-        © <span id="year"></span> Dandara Web Design.
-        All rights reserved.
+        © <span id="year"></span> <span data-key="footer_rights">Dandara for Web Design. All rights reserved.</span>
       </div>
 
       <div class="socials">
-
         <a href="#" class="social">IG</a>
         <a href="#" class="social">IN</a>
         <a href="#" class="social">X</a>
         <a href="https://wa.me/249965517312" target="_blank" class="social">WA</a>
-
       </div>
-
     </div>
-
   </footer>
 
-
-  <!-- =========================================
-       JAVASCRIPT
-  ========================================= -->
-
+  <!-- JAVASCRIPT & DICTIONARY -->
   <script>
+
+    /* ================================
+       TRANSLATION DICTIONARY
+    ================================= */
+
+    const translations = {
+      en: {
+        page_title: "Dandara for Web Design | Modern Websites for a Better Digital Tomorrow",
+        page_desc: "Dandara for Web Design creates modern, responsive and high-performance websites for businesses and individuals.",
+        nav_home: "Home",
+        nav_services: "Services",
+        nav_work: "Our Work",
+        nav_about: "About",
+        nav_contact: "Let's Talk",
+        hero_eyebrow: "Independent Web Designer",
+        hero_title: "Ideas into <span>Digital</span> Experiences.",
+        hero_desc: "I design and build clean, fast and responsive websites that help businesses look better, communicate clearly and grow online.",
+        hero_btn_work: "Explore My Work →",
+        hero_btn_start: "Start a Project",
+        browser_title: "Modern Websites for a Better <span>Digital Tomorrow.</span>",
+        browser_desc: "Clean interfaces. Responsive layouts. Fast performance. Thoughtful experiences.",
+        browser_btn: "Let's Build Something",
+        float_card_text: "Focused on clean design, performance and details.",
+        services_eyebrow: "What I Do",
+        services_title: "Everything your <span>website</span> needs.",
+        services_desc: "From the first idea to the final pixel, I create digital experiences designed around your goals.",
+        srv1_title: "Website Design",
+        srv1_desc: "Modern and responsive websites designed to look great on every screen.",
+        srv2_title: "UI / UX Design",
+        srv2_desc: "Simple interfaces and intuitive experiences that people enjoy using.",
+        srv3_title: "Web Development",
+        srv3_desc: "Clean, scalable and reliable code built with performance in mind.",
+        srv4_title: "Brand Identity",
+        srv4_desc: "Visual identities that make your business recognizable and memorable.",
+        work_eyebrow: "Selected Work",
+        work_title: "Designed to <span>stand out.</span>",
+        work_desc: "A selection of digital concepts focused on clarity, usability and strong visual identity.",
+        p1_cat: "Web Design",
+        p1_title: "Modern Business",
+        p2_cat: "UI / UX",
+        p2_title: "Digital Platform",
+        p3_cat: "Brand Identity",
+        p3_title: "Creative Studio",
+        p4_cat: "Development",
+        p4_title: "Startup Website",
+        process_eyebrow: "My Process",
+        process_title: "From idea to <span>reality.</span>",
+        process_desc: "A simple process that keeps every project focused, transparent and moving forward.",
+        pr1_num: "01 / DISCOVER",
+        pr1_title: "Understand",
+        pr1_desc: "We define your goals, audience, requirements and project direction.",
+        pr2_num: "02 / DESIGN",
+        pr2_title: "Design",
+        pr2_desc: "I turn the strategy into a clear and memorable visual experience.",
+        pr3_num: "03 / BUILD",
+        pr3_title: "Develop",
+        pr3_desc: "Your design becomes a fast, responsive and functional website.",
+        pr4_num: "04 / LAUNCH",
+        pr4_title: "Launch",
+        pr4_desc: "We test, refine and prepare your website for the real world.",
+        about_eyebrow: "About Dandara",
+        about_title: "Small studio. <span style='color:var(--green-light);'>Big ideas.</span>",
+        about_p1: "Dandara for Web Design is an independent creative web design studio focused on building modern digital experiences for businesses, brands and individuals.",
+        about_p2: "Every project receives direct attention, thoughtful design and clean development — without unnecessary complexity.",
+        val_1: "Clean Design",
+        val_2: "Fast Performance",
+        val_3: "Responsive",
+        val_4: "Personal Attention",
+        cta_title: "Have an idea? <span>Let's build it.</span>",
+        cta_desc: "Tell me what you're imagining and let's turn it into something people remember.",
+        cta_btn: "Start a Project →",
+        contact_eyebrow: "Get In Touch",
+        contact_title: "Let's create something great.",
+        contact_desc: "Have a website idea, a new business, or an existing website that needs a fresh look? Send me a message.",
+        lbl_email: "Email",
+        lbl_location: "Location",
+        val_location: "Sudan",
+        lbl_response: "Response",
+        val_response: "Usually within 24 hours",
+        form_lbl_name: "Your Name",
+        form_lbl_email: "Email Address",
+        form_lbl_project: "Project Type",
+        form_lbl_msg: "Tell me about your project",
+        input_name_ph: "John Doe",
+        input_email_ph: "you@example.com",
+        input_project_ph: "Website, UI/UX, Branding...",
+        input_msg_ph: "Tell me a little about your idea...",
+        btn_send_email: "Send via Email ✉",
+        btn_whatsapp: "Quick Inquiry (WhatsApp) 💬",
+        footer_rights: "Dandara for Web Design. All rights reserved.",
+        img_alt: "Dandara for Web Design Logo"
+      },
+
+      ar: {
+        page_title: "Dandara for Web Design | مواقع إلكترونية حديثة لمستقبل رقمي أفضل",
+        page_desc: "Dandara for Web Design تقدم خدمات تصميم وتطوير مواقع إلكترونية حديثة، متجاوبة، وعالية الأداء للأفراد والشركات.",
+        nav_home: "الرئيسية",
+        nav_services: "الخدمات",
+        nav_work: "أعمالنا",
+        nav_about: "عن المكتب",
+        nav_contact: "تواصل معنا",
+        hero_eyebrow: "مصمم مواقع مستقل",
+        hero_title: "نحوّل الأفكار إلى تجارب <span>رقمية.</span>",
+        hero_desc: "أقوم بتصميم وبناء مواقع حديثة، سريعة ومتجاوبة تساعد الشركات والأفراد على الظهور بشكل أفضل والتواجد بشكل قوي عبر الإنترنت.",
+        hero_btn_work: "استكشف أعمالي ←",
+        hero_btn_start: "ابدأ مشروعك",
+        browser_title: "مواقع حديثة لمستقبل <span>رقمي أفضل.</span>",
+        browser_desc: "واجهات أنيقة. تصميم متجاوب. أداء سريع. تجربة مستخدم فريدة.",
+        browser_btn: "لنبدأ البناء معاً",
+        float_card_text: "تركيز كامل على التصميم النظيف، الأداء، والتدقيق في التفاصيل.",
+        services_eyebrow: "ماذا أقدم",
+        services_title: "كل ما يحتاجه <span>موقعك.</span>",
+        services_desc: "من الفكرة الأولى وحتى اللمسات الأخيرة، أصمم تجارب رقمية مخصصة لتحقيق أهدافك.",
+        srv1_title: "تصميم المواقع",
+        srv1_desc: "مواقع إلكترونية حديثة ومتجاوبة تبدو رائعة على جميع الشاشات.",
+        srv2_title: "تصميم الواجهات UI / UX",
+        srv2_desc: "واجهات بسيطة وتجارب سلسة يستمتع المستخدمون بالتفاعل معها.",
+        srv3_title: "تطوير البرمجيات",
+        srv3_desc: "أكواد برمجية نظيفة، آمنة ومبنية بأعلى معايير الأداء والسرعة.",
+        srv4_title: "الهوية البصرية",
+        srv4_desc: "هويات بصرية تجعل مشروعك مميزاً ويسهل التعرف عليه.",
+        work_eyebrow: "أعمال مختارة",
+        work_title: "صُممت لكي <span>تبرز وتلفت الأنظار.</span>",
+        work_desc: "مجموعة من المفاهيم الرقمية بركز فيها على الوضوح، سهولة الاستخدام، والهوية القوية.",
+        p1_cat: "تصميم مواقع",
+        p1_title: "موقع شركة حديثة",
+        p2_cat: "واجهات مستخدم",
+        p2_title: "منصة رقمية",
+        p3_cat: "هوية بصرية",
+        p3_title: "استوديو إبداعي",
+        p4_cat: "تطوير برمجي",
+        p4_title: "موقع شركة ناشئة",
+        process_eyebrow: "خطوات العمل",
+        process_title: "من الفكرة إلى <span>الواقع.</span>",
+        process_desc: "منهجية عمل بسيطة تضمن الوضوح، الشفافية، وإنجاز المشروع بفعالية.",
+        pr1_num: "01 / الاستكشاف",
+        pr1_title: "الفهم والتحليل",
+        pr1_desc: "نحدد أهدافك، جمهورك المستهدف، والمتطلبات الأساسية للبدء.",
+        pr2_num: "02 / التصميم",
+        pr2_title: "التصميم الإبداعي",
+        pr2_desc: "أحول الخطة والاستراتيجية إلى تجربة بصرية ممتازة وجذابة.",
+        pr3_num: "03 / التطوير",
+        pr3_title: "التطوير والبرمجة",
+        pr3_desc: "يتحول التصميم إلى موقع إلكتروني حقيقي، سريع ومتجاوب.",
+        pr4_num: "04 / الإطلاق",
+        pr4_title: "النشر والتدشين",
+        pr4_desc: "نقوم باختبار الموقع وتدقيقه ثم إطلاقه ليكون جاهزاً للزوار.",
+        about_eyebrow: "عن Dandara",
+        about_title: "استوديو صغير. <span style='color:var(--green-light);'>أفكار كبيرة.</span>",
+        about_p1: "Dandara for Web Design هو استوديو تصميم مستقل متخصص في بناء تجارب رقمية حديثة للشركات، العلامات التجارية والأفراد.",
+        about_p2: "كل مشروع يحظى باهتمام مباشر، تصميم مدروس، وبرمجة نظيفة بدون تعقيدات لا داعي لها.",
+        val_1: "تصميم أنيق",
+        val_2: "أداء وسرعة",
+        val_3: "متجاوب بالكامل",
+        val_4: "اهتمام شخصي",
+        cta_title: "لديك فكرة مشروع؟ <span>دعنا نبنيها.</span>",
+        cta_desc: "أخبرني برؤيتك ودعنا نحولها إلى واقع رقمي يذكره الناس.",
+        cta_btn: "ابدأ مشروعك الأن ←",
+        contact_eyebrow: "تواصل معي",
+        contact_title: "دعنا نصنع شيئاً رائعاً معاً.",
+        contact_desc: "هل لديك فكرة موقع جديدة، مشروع ناشئ، أو موقع قديم يحتاج إلى تطوير وإعادة هيكلة؟ أرسل لي رسالة.",
+        lbl_email: "البريد الإلكتروني",
+        lbl_location: "الموقع",
+        val_location: "السودان",
+        lbl_response: "سرعة الرد",
+        val_response: "عادةً خلال 24 ساعة",
+        form_lbl_name: "الاسم الكريم",
+        form_lbl_email: "البريد الإلكتروني",
+        form_lbl_project: "نوع المشروع",
+        form_lbl_msg: "تفاصيل المشروع",
+        input_name_ph: "محمد أحمد",
+        input_email_ph: "name@example.com",
+        input_project_ph: "موقع إلكتروني، متجر، تطبيق...",
+        input_msg_ph: "اكتب هنا نبذة عن مشروعك ومتطلباتك...",
+        btn_send_email: "إرسال عبر البريد ✉",
+        btn_whatsapp: "استفسار سريع (واتساب) 💬",
+        footer_rights: "Dandara for Web Design. جميع الحقوق محفوظة.",
+        img_alt: "شعار Dandara for Web Design"
+      }
+    };
+
+    /* ================================
+       LANGUAGE SWITCHING LOGIC
+    ================================= */
+
+    let currentLang = localStorage.getItem("dandara_lang") || "en";
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem("dandara_lang", lang);
+
+      const htmlTag = document.documentElement;
+      htmlTag.setAttribute("lang", lang);
+      htmlTag.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+
+      // Update Titles and Meta
+      document.getElementById("pageTitle").innerText = translations[lang].page_title;
+      document.getElementById("pageDesc").setAttribute("content", translations[lang].page_desc);
+
+      // Update Text Elements with data-key
+      document.querySelectorAll("[data-key]").forEach(elem => {
+        const key = elem.getAttribute("data-key");
+        if (translations[lang][key]) {
+          elem.innerHTML = translations[lang][key];
+        }
+      });
+
+      // Update Form Placeholders
+      const nameInput = document.getElementById("name");
+      const emailInput = document.getElementById("email");
+      const projectInput = document.getElementById("project");
+      const msgInput = document.getElementById("message");
+
+      if (nameInput) nameInput.placeholder = translations[lang].input_name_ph;
+      if (emailInput) emailInput.placeholder = translations[lang].input_email_ph;
+      if (projectInput) projectInput.placeholder = translations[lang].input_project_ph;
+      if (msgInput) msgInput.placeholder = translations[lang].input_msg_ph;
+
+      // Update Images Alt Tags
+      document.getElementById("logoImg").alt = translations[lang].img_alt;
+      document.getElementById("miniLogoImg").alt = translations[lang].img_alt;
+      document.getElementById("aboutSymbolImg").alt = translations[lang].img_alt;
+
+      // Update Language Toggle Button Text
+      document.getElementById("langText").innerText = lang === "ar" ? "English" : "العربية";
+    }
+
+    document.getElementById("langToggle").addEventListener("click", () => {
+      const newLang = currentLang === "en" ? "ar" : "en";
+      setLanguage(newLang);
+    });
+
+    // Initialize on Load
+    setLanguage(currentLang);
+
 
     /* ================================
        HEADER SCROLL
     ================================= */
 
     const header = document.getElementById("header");
-
     window.addEventListener("scroll", () => {
-
       if (window.scrollY > 30) {
         header.classList.add("scrolled");
       } else {
         header.classList.remove("scrolled");
       }
-
     });
 
 
@@ -1995,15 +1917,12 @@
     const navLinks = document.getElementById("navLinks");
 
     if (menuBtn && navLinks) {
-
       menuBtn.addEventListener("click", (e) => {
         e.stopPropagation();
         navLinks.classList.toggle("active");
-
         menuBtn.textContent = navLinks.classList.contains("active") ? "✕" : "☰";
       });
 
-      // إغلاق القائمة عند الضغط على أي رابط
       document.querySelectorAll(".nav-links a").forEach(link => {
         link.addEventListener("click", () => {
           navLinks.classList.remove("active");
@@ -2011,14 +1930,12 @@
         });
       });
 
-      // إغلاق القائمة عند الضغط في أي مكان خارجها
       document.addEventListener("click", (e) => {
         if (!navLinks.contains(e.target) && !menuBtn.contains(e.target)) {
           navLinks.classList.remove("active");
           menuBtn.textContent = "☰";
         }
       });
-
     }
 
 
@@ -2028,29 +1945,17 @@
 
     const observer = new IntersectionObserver(
       entries => {
-
         entries.forEach(entry => {
-
           if (entry.isIntersecting) {
-
             entry.target.classList.add("visible");
-
             observer.unobserve(entry.target);
-
           }
-
         });
-
       },
-      {
-        threshold: 0.12
-      }
+      { threshold: 0.12 }
     );
 
-
-    document
-      .querySelectorAll(".reveal")
-      .forEach(element => observer.observe(element));
+    document.querySelectorAll(".reveal").forEach(element => observer.observe(element));
 
 
     /* ================================
@@ -2060,9 +1965,7 @@
     const form = document.getElementById("contactForm");
 
     if (form) {
-
       form.addEventListener("submit", function(event) {
-
         event.preventDefault();
 
         const name = document.getElementById("name").value;
@@ -2071,17 +1974,14 @@
         const message = document.getElementById("message").value;
 
         const formattedMessage =
-          `Hello Dandara Web Design!\n\nName: ${name}\nEmail: ${email}\nProject: ${project}\n\nMessage:\n${message}`;
+          `Hello Dandara for Web Design!\n\nName: ${name}\nEmail: ${email}\nProject: ${project}\n\nMessage:\n${message}`;
 
-        // إعداد فتح البريد الإلكتروني المباشر
         const mailtoSubject = encodeURIComponent(`New Project Inquiry: ${project}`);
         const mailtoBody = encodeURIComponent(formattedMessage);
         const mailtoURL = `mailto:ahmed.yahia.sd@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
 
         window.location.href = mailtoURL;
-
       });
-
     }
 
 
