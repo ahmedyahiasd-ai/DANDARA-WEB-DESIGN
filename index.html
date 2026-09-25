@@ -220,23 +220,6 @@
       color: var(--black) !important;
     }
 
-    .nav-app-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 8px 14px;
-      background: var(--green);
-      color: var(--white) !important;
-      border-radius: 50px;
-      font-size: 12px !important;
-      font-weight: 700 !important;
-    }
-
-    .nav-app-btn:hover {
-      background: var(--green-light);
-      color: var(--black) !important;
-    }
-
     /* LANGUAGE BUTTON */
     .lang-btn {
       background: rgba(126, 217, 87, 0.1);
@@ -1164,13 +1147,6 @@
           <li><a href="#work" data-key="nav_work">Our Work</a></li>
           <li><a href="#about" data-key="nav_about">About</a></li>
           <li><a href="#contact" class="nav-cta" data-key="nav_contact">Let's Talk</a></li>
-          
-          <!-- رابط صفحة التحميل المستقلة في المنيو -->
-          <li class="app-download-element">
-            <a href="download.html" class="nav-app-btn" data-key="nav_download_page">
-              <span>📱</span> Download App
-            </a>
-          </li>
 
           <li>
             <button class="lang-btn" id="langToggle">
@@ -1220,12 +1196,9 @@
               Start a Project
             </a>
             
-            <!-- أزرار التحميل المباشر والمستقل في قسم الهيرو -->
+            <!-- زر التحميل المباشر فقط -->
             <a href="3901318.apk" download class="btn btn-apk app-download-element" data-key="hero_btn_apk">
               📲 Download App (.apk)
-            </a>
-            <a href="download.html" class="btn btn-outline app-download-element" data-key="hero_btn_app_page">
-              📱 Download Page
             </a>
           </div>
         </div>
@@ -1713,7 +1686,6 @@
       const userAgent = navigator.userAgent || navigator.vendor || window.opera;
       const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
       
-      // يمكنك إضافة أي كلمة دالة خاصة بالـ WebView الخاص بتطبيقك هنا (مثلاً: DandaraApp)
       const isInAppWebview = /(wv|WebView|DandaraApp)/i.test(userAgent) || isStandalone;
 
       if (isInAppWebview) {
@@ -1739,15 +1711,12 @@
         nav_work: "Our Work",
         nav_about: "About",
         nav_contact: "Let's Talk",
-        nav_app: "📱 App",
-        nav_download_page: "📱 Download App",
         hero_eyebrow: "Independent Web Designer",
         hero_title: "Ideas into <span>Digital</span> Experiences.",
         hero_desc: "I design and build clean, fast and responsive websites that help businesses look better, communicate clearly and grow online.",
         hero_btn_work: "Explore My Work →",
         hero_btn_start: "Start a Project",
         hero_btn_apk: "📲 Download App (.apk)",
-        hero_btn_app_page: "📱 App Download Page",
         browser_title: "Modern Websites for a Better <span>Digital Tomorrow.</span>",
         browser_desc: "Clean interfaces. Responsive layouts. Fast performance. Thoughtful experiences.",
         browser_btn: "Let's Build Something",
@@ -1830,15 +1799,12 @@
         nav_work: "أعمالنا",
         nav_about: "عن المكتب",
         nav_contact: "تواصل معنا",
-        nav_app: "📱 التطبيق",
-        nav_download_page: "📱 تحميل التطبيق",
         hero_eyebrow: "مصمم مواقع مستقل",
         hero_title: "نحوّل الأفكار إلى تجارب <span>رقمية.</span>",
         hero_desc: "أقوم بتصميم وبناء مواقع حديثة، سريعة ومتجاوبة تساعد الشركات والأفراد على الظهور بشكل أفضل والتواجد بشكل قوي عبر الإنترنت.",
         hero_btn_work: "استكشف أعمالي ←",
         hero_btn_start: "ابدأ مشروعك",
         hero_btn_apk: "📲 تحميل التطبيق (.apk)",
-        hero_btn_app_page: "📱 صفحة تحميل التطبيق",
         browser_title: "مواقع حديثة لمستقبل <span>رقمي أفضل.</span>",
         browser_desc: "واجهات أنيقة. تصميم متجاوب. أداء سريع. تجربة مستخدم فريدة.",
         browser_btn: "لنبدأ البناء معاً",
