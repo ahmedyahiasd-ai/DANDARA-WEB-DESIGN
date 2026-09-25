@@ -881,7 +881,7 @@
     }
 
     /* =========================================
-       CONTACT
+       CONTACT & FORM
     ========================================= */
 
     .contact-grid {
@@ -975,6 +975,25 @@
     .field textarea:focus {
       border-color: rgba(126,217,87,.5);
       box-shadow: 0 0 0 3px rgba(126,217,87,.05);
+    }
+
+    /* BUTTONS IN FORM */
+    .form-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-whatsapp {
+      background: rgba(37, 211, 102, 0.1);
+      border: 1px solid rgba(37, 211, 102, 0.4);
+      color: #25D366;
+    }
+
+    .btn-whatsapp:hover {
+      background: #25D366;
+      color: #07100D;
+      transform: translateY(-3px);
     }
 
     /* =========================================
@@ -1152,6 +1171,14 @@
       .footer-content {
         flex-direction: column;
         text-align: center;
+      }
+
+      .form-actions {
+        flex-direction: column;
+      }
+
+      .form-actions .btn {
+        width: 100%;
       }
     }
   </style>
@@ -1883,13 +1910,23 @@
           </div>
 
 
-          <button
-            type="submit"
-            class="btn btn-primary"
-            style="border:none;"
-          >
-            Send Message →
-          </button>
+          <div class="form-actions">
+            <button
+              type="submit"
+              class="btn btn-primary"
+              style="border:none;"
+            >
+              Send via Email ✉
+            </button>
+
+            <a 
+              href="https://wa.me/249965517312?text=Hello%20Dandara!%20I%20have%20an%20inquiry%20about%20your%20services." 
+              target="_blank" 
+              class="btn btn-whatsapp"
+            >
+              Quick Inquiry (WhatsApp) 💬
+            </a>
+          </div>
 
         </form>
 
@@ -2017,7 +2054,7 @@
 
 
     /* ================================
-       CONTACT FORM (WHATSAPP + MAILTO)
+       CONTACT FORM (EMAIL ONLY)
     ================================= */
 
     const form = document.getElementById("contactForm");
@@ -2036,17 +2073,11 @@
         const formattedMessage =
           `Hello Dandara Web Design!\n\nName: ${name}\nEmail: ${email}\nProject: ${project}\n\nMessage:\n${message}`;
 
-        // 1. إعداد رابط البريد
+        // إعداد فتح البريد الإلكتروني المباشر
         const mailtoSubject = encodeURIComponent(`New Project Inquiry: ${project}`);
         const mailtoBody = encodeURIComponent(formattedMessage);
         const mailtoURL = `mailto:ahmed.yahia.sd@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
 
-        // 2. إعداد رابط الواتساب
-        const phoneNumber = "249965517312";
-        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(formattedMessage)}`;
-
-        // فتح التطبيقين
-        window.open(whatsappURL, "_blank");
         window.location.href = mailtoURL;
 
       });
