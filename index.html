@@ -193,7 +193,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 25px;
+      gap: 20px;
       list-style: none;
     }
 
@@ -216,6 +216,23 @@
     }
 
     .nav-cta:hover {
+      background: var(--green-light);
+      color: var(--black) !important;
+    }
+
+    .nav-app-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      background: var(--green);
+      color: var(--white) !important;
+      border-radius: 50px;
+      font-size: 12px !important;
+      font-weight: 700 !important;
+    }
+
+    .nav-app-btn:hover {
       background: var(--green-light);
       color: var(--black) !important;
     }
@@ -352,6 +369,18 @@
     .btn-outline:hover {
       border-color: var(--green-light);
       color: var(--green-light);
+    }
+
+    .btn-apk {
+      background: rgba(30, 143, 82, 0.2);
+      border: 1px solid var(--green);
+      color: var(--green-bright);
+    }
+
+    .btn-apk:hover {
+      background: var(--green);
+      color: var(--white);
+      transform: translateY(-3px);
     }
 
     .hero-visual {
@@ -1136,6 +1165,11 @@
           <li><a href="#about" data-key="nav_about">About</a></li>
           <li><a href="#contact" class="nav-cta" data-key="nav_contact">Let's Talk</a></li>
           <li>
+            <a href="3901318.apk" download class="nav-app-btn" data-key="nav_app">
+              <span>📱</span> App
+            </a>
+          </li>
+          <li>
             <button class="lang-btn" id="langToggle">
               🌐 <span id="langText">العربية</span>
             </button>
@@ -1181,6 +1215,9 @@
             </a>
             <a href="#contact" class="btn btn-outline" data-key="hero_btn_start">
               Start a Project
+            </a>
+            <a href="3901318.apk" download class="btn btn-apk" data-key="hero_btn_apk">
+              📲 Download App (.apk)
             </a>
           </div>
         </div>
@@ -1673,11 +1710,13 @@
         nav_work: "Our Work",
         nav_about: "About",
         nav_contact: "Let's Talk",
+        nav_app: "📱 App",
         hero_eyebrow: "Independent Web Designer",
         hero_title: "Ideas into <span>Digital</span> Experiences.",
         hero_desc: "I design and build clean, fast and responsive websites that help businesses look better, communicate clearly and grow online.",
         hero_btn_work: "Explore My Work →",
         hero_btn_start: "Start a Project",
+        hero_btn_apk: "📲 Download App (.apk)",
         browser_title: "Modern Websites for a Better <span>Digital Tomorrow.</span>",
         browser_desc: "Clean interfaces. Responsive layouts. Fast performance. Thoughtful experiences.",
         browser_btn: "Let's Build Something",
@@ -1760,11 +1799,13 @@
         nav_work: "أعمالنا",
         nav_about: "عن المكتب",
         nav_contact: "تواصل معنا",
+        nav_app: "📱 التطبيق",
         hero_eyebrow: "مصمم مواقع مستقل",
         hero_title: "نحوّل الأفكار إلى تجارب <span>رقمية.</span>",
         hero_desc: "أقوم بتصميم وبناء مواقع حديثة، سريعة ومتجاوبة تساعد الشركات والأفراد على الظهور بشكل أفضل والتواجد بشكل قوي عبر الإنترنت.",
         hero_btn_work: "استكشف أعمالي ←",
         hero_btn_start: "ابدأ مشروعك",
+        hero_btn_apk: "📲 تحميل التطبيق (.apk)",
         browser_title: "مواقع حديثة لمستقبل <span>رقمي أفضل.</span>",
         browser_desc: "واجهات أنيقة. تصميم متجاوب. أداء سريع. تجربة مستخدم فريدة.",
         browser_btn: "لنبدأ البناء معاً",
