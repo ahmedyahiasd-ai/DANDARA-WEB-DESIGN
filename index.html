@@ -354,18 +354,6 @@
       color: var(--green-light);
     }
 
-    .btn-apk {
-      background: rgba(30, 143, 82, 0.2);
-      border: 1px solid var(--green);
-      color: var(--green-bright);
-    }
-
-    .btn-apk:hover {
-      background: var(--green);
-      color: var(--white);
-      transform: translateY(-3px);
-    }
-
     .hero-visual {
       position: relative;
       height: 500px;
@@ -1195,11 +1183,6 @@
             <a href="#contact" class="btn btn-outline" data-key="hero_btn_start">
               Start a Project
             </a>
-            
-            <!-- زر التحميل المباشر فقط -->
-            <a href="3901318.apk" download class="btn btn-apk app-download-element" data-key="hero_btn_apk">
-              📲 Download App (.apk)
-            </a>
           </div>
         </div>
 
@@ -1679,26 +1662,6 @@
   <script>
 
     /* ================================
-       SOLUTION 1: APP ENVIRONMENT CHECK
-       إخفاء أزرار التحميل إذا كان الزائر داخل التطبيق
-    ================================= */
-    function checkAppEnvironment() {
-      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-      const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
-      
-      const isInAppWebview = /(wv|WebView|DandaraApp)/i.test(userAgent) || isStandalone;
-
-      if (isInAppWebview) {
-        document.querySelectorAll('.app-download-element').forEach(el => {
-          el.style.display = 'none';
-        });
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", checkAppEnvironment);
-
-
-    /* ================================
        TRANSLATION DICTIONARY
     ================================= */
 
@@ -1716,7 +1679,6 @@
         hero_desc: "I design and build clean, fast and responsive websites that help businesses look better, communicate clearly and grow online.",
         hero_btn_work: "Explore My Work →",
         hero_btn_start: "Start a Project",
-        hero_btn_apk: "📲 Download App (.apk)",
         browser_title: "Modern Websites for a Better <span>Digital Tomorrow.</span>",
         browser_desc: "Clean interfaces. Responsive layouts. Fast performance. Thoughtful experiences.",
         browser_btn: "Let's Build Something",
@@ -1804,7 +1766,6 @@
         hero_desc: "أقوم بتصميم وبناء مواقع حديثة، سريعة ومتجاوبة تساعد الشركات والأفراد على الظهور بشكل أفضل والتواجد بشكل قوي عبر الإنترنت.",
         hero_btn_work: "استكشف أعمالي ←",
         hero_btn_start: "ابدأ مشروعك",
-        hero_btn_apk: "📲 تحميل التطبيق (.apk)",
         browser_title: "مواقع حديثة لمستقبل <span>رقمي أفضل.</span>",
         browser_desc: "واجهات أنيقة. تصميم متجاوب. أداء سريع. تجربة مستخدم فريدة.",
         browser_btn: "لنبدأ البناء معاً",
@@ -1815,7 +1776,7 @@
         srv1_title: "تصميم المواقع",
         srv1_desc: "مواقع إلكترونية حديثة ومتجاوبة تبدو رائعة على جميع الشاشات.",
         srv2_title: "تصميم الواجهات UI / UX",
-        srv2_desc: "واجهات بسيطة وتجارب سلسة يستمتع المستخدمون بالتفاعل معها.",
+        srv2_desc: "واجهات بسيطة وتجارب سلسة يستمتع المستخدمون والتفاعل معها.",
         srv3_title: "تطوير البرمجيات",
         srv3_desc: "أكواد برمجية نظيفة، آمنة ومبنية بأعلى معايير الأداء والسرعة.",
         srv4_title: "الهوية البصرية",
