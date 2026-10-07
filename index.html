@@ -41,7 +41,7 @@
   <style>
     /* =========================================
        DANDARA FOR WEB DESIGN - BRAND COLORS
-    ========================================= */
+    ========================================= -->
 
     :root {
       --green-dark: #0B3D2E;
@@ -692,6 +692,31 @@
       border-radius: 4px;
     }
 
+    /* New Project Card Image Style */
+    .project-image-box {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 220px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(126, 217, 87, 0.2);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      transition: transform 0.4s ease;
+    }
+    .project-large .project-image-box {
+      height: 300px;
+    }
+    .project:hover .project-image-box {
+      transform: translateY(-5px);
+      border-color: rgba(126, 217, 87, 0.4);
+    }
+    .project-image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     .project-overlay {
       position: absolute;
       inset: 0;
@@ -717,6 +742,28 @@
     .project-info h3 {
       font-size: 22px;
       margin-top: 5px;
+    }
+
+    .project-btn-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 12px;
+      padding: 7px 14px;
+      background: rgba(126, 217, 87, 0.15);
+      border: 1px solid rgba(126, 217, 87, 0.3);
+      border-radius: 20px;
+      color: var(--green-light);
+      font-size: 11px;
+      font-weight: 700;
+      transition: var(--transition);
+      z-index: 2;
+      position: relative;
+    }
+
+    .project-btn-link:hover {
+      background: var(--green-light);
+      color: var(--black);
     }
 
     /* PROCESS */
@@ -1303,42 +1350,22 @@
         </div>
 
         <div class="portfolio-grid">
-          <!-- PROJECT 1 -->
+          <!-- PROJECT 1: DANDARA TRAVELS (NEW) -->
           <div class="project project-large reveal">
             <div class="project-bg"></div>
 
-            <div class="mockup-canvas">
-              <div class="mock-bar">
-                <div class="mock-dots">
-                  <div class="mock-dot"></div>
-                  <div class="mock-dot"></div>
-                  <div class="mock-dot"></div>
-                </div>
-                <div class="mock-nav-lines">
-                  <div class="mock-line" style="width: 25px;"></div>
-                  <div class="mock-line" style="width: 35px;"></div>
-                  <div class="mock-line" style="width: 20px;"></div>
-                </div>
-              </div>
-
-              <div class="mock-hero-layout">
-                <div class="mock-title"></div>
-                <div class="mock-sub"></div>
-                <div class="mock-sub" style="width: 50%;"></div>
-                
-                <div class="mock-cards-grid">
-                  <div class="mock-card"></div>
-                  <div class="mock-card"></div>
-                  <div class="mock-card"></div>
-                </div>
-              </div>
+            <div class="project-image-box">
+              <img src="travels-logo.png" alt="Dandara Travels Poster" />
             </div>
 
             <div class="project-overlay"></div>
 
             <div class="project-info">
-              <span data-key="p1_cat">Web Design</span>
-              <h3 data-key="p1_title">Modern Business</h3>
+              <span data-key="p1_cat">Travel & Transport Platform</span>
+              <h3 data-key="p1_title">Dandara Travels (ترحيلات دندرة)</h3>
+              <a href="https://dandara-travels.vercel.app" target="_blank" class="project-btn-link" data-key="visit_project">
+                Visit Live Site ↗
+              </a>
             </div>
           </div>
 
@@ -1735,8 +1762,9 @@
         work_eyebrow: "Selected Work",
         work_title: "Designed to <span>stand out.</span>",
         work_desc: "A selection of digital concepts focused on clarity, usability and strong visual identity.",
-        p1_cat: "Web Design",
-        p1_title: "Modern Business",
+        p1_cat: "Travel & Transport Platform",
+        p1_title: "Dandara Travels",
+        visit_project: "Visit Live Site ↗",
         p2_cat: "UI / UX",
         p2_title: "Digital Platform",
         p3_cat: "Brand Identity",
@@ -1823,8 +1851,9 @@
         work_eyebrow: "أعمال مختارة",
         work_title: "صُممت لكي <span>تبرز وتلفت الأنظار.</span>",
         work_desc: "مجموعة من المفاهيم الرقمية بركز فيها على الوضوح، سهولة الاستخدام، والهوية القوية.",
-        p1_cat: "تصميم مواقع",
-        p1_title: "موقع شركة حديثة",
+        p1_cat: "منصة سفر وترحيلات",
+        p1_title: "ترحيلات دندرة (Dandara Travels)",
+        visit_project: "زيارة الموقع الحي ↗",
         p2_cat: "واجهات مستخدم",
         p2_title: "منصة رقمية",
         p3_cat: "هوية بصرية",
@@ -2037,4 +2066,4 @@
   </script>
 
 </body>
-                    </html>
+</html>
